@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    154585,       3114]
-NotebookOptionsPosition[    150709,       3040]
-NotebookOutlinePosition[    151199,       3058]
-CellTagsIndexPosition[    151156,       3055]
+NotebookDataLength[    162381,       3339]
+NotebookOptionsPosition[    158304,       3263]
+NotebookOutlinePosition[    158794,       3281]
+CellTagsIndexPosition[    158751,       3278]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -329,7 +329,7 @@ Cell[BoxData[
  CellChangeTimes->{{3.958127781794818*^9, 3.95812779269256*^9}},
  CellLabel->"Out[5]=",ExpressionUUID->"4937b840-16b4-4cb4-9ca4-06085223999d"]
 }, Open  ]]
-}, Closed]],
+}, Open  ]],
 
 Cell[CellGroupData[{
 
@@ -341,16 +341,13 @@ Cell["Taylor/Maclaurin/Power Series", "Section",
 74556cb5caf3"],
 
 Cell[TextData[{
- "For ",
- "smooth",
- " ",
+ "For smooth ",
  Cell[BoxData[
   FormBox[
    RowBox[{
     RowBox[{"f", ":", "\[DoubleStruckCapitalR]"}], "\[Rule]", 
     SuperscriptBox["\[DoubleStruckCapitalR]", "n"]}], TraditionalForm]],
-  FormatType->TraditionalForm,ExpressionUUID->
-  "a3dbb37b-64d4-4e71-8225-8577672ba1b3"],
+  ExpressionUUID->"a3dbb37b-64d4-4e71-8225-8577672ba1b3"],
  " the power series  \n\t",
  Cell[BoxData[
   FormBox[
@@ -365,8 +362,7 @@ Cell[TextData[{
         SuperscriptBox["f", 
          RowBox[{"(", "i", ")"}]], "(", "0", ")"}], 
        RowBox[{"i", "!"}]], 
-      SuperscriptBox["t", "i"]}]}]}], TraditionalForm]],
-  FormatType->TraditionalForm,ExpressionUUID->
+      SuperscriptBox["t", "i"]}]}]}], TraditionalForm]],ExpressionUUID->
   "83014ad9-8013-470b-b536-0b2205384d9b"],
  " \nmatches derivatives of all orders ",
  Cell[BoxData[
@@ -375,8 +371,7 @@ Cell[TextData[{
     RowBox[{
      SuperscriptBox["f", 
       RowBox[{"(", "0", ")"}]], "(", "0", ")"}], "=", 
-    RowBox[{"f", "(", "0", ")"}]}], TraditionalForm]],
-  FormatType->TraditionalForm,ExpressionUUID->
+    RowBox[{"f", "(", "0", ")"}]}], TraditionalForm]],ExpressionUUID->
   "7ea57047-5929-4e10-9eb5-d08d05bd7e08"],
  ", ",
  Cell[BoxData[
@@ -387,8 +382,7 @@ Cell[TextData[{
       RowBox[{"(", "1", ")"}]], "(", "0", ")"}], "=", 
     RowBox[{
      RowBox[{"f", "'"}], 
-     RowBox[{"(", "0", ")"}]}]}], TraditionalForm]],
-  FormatType->TraditionalForm,ExpressionUUID->
+     RowBox[{"(", "0", ")"}]}]}], TraditionalForm]],ExpressionUUID->
   "8db11e51-006d-49f0-84b5-a4cb8096b4bf"],
  ", ",
  Cell[BoxData[
@@ -399,15 +393,220 @@ Cell[TextData[{
       RowBox[{"(", "2", ")"}]], "(", "0", ")"}], "=", 
     RowBox[{
      RowBox[{"f", "''"}], 
-     RowBox[{"(", "0", ")"}]}]}], TraditionalForm]],
-  FormatType->TraditionalForm,ExpressionUUID->
+     RowBox[{"(", "0", ")"}]}]}], TraditionalForm]],ExpressionUUID->
   "2858f484-206c-4275-8073-94b65d07dfbf"],
  ", \[Ellipsis] at ",
  Cell[BoxData[
   FormBox[
-   RowBox[{"t", "=", "0"}], TraditionalForm]],
-  FormatType->TraditionalForm,ExpressionUUID->
+   RowBox[{"t", "=", "0"}], TraditionalForm]],ExpressionUUID->
   "bbfa374e-28d6-468a-af2c-875e3a58334c"],
+ ".  Functions are frequently defined (inside some radius of convergence) by \
+a power series.  For instance, in Calculus II i.e. ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"n", "=", "1"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "fa2b7606-d7d7-41e6-8e62-55d81b760495"],
+ " we learned that\n\t",
+ Cell[BoxData[
+  FormBox[GridBox[{
+     {
+      SuperscriptBox["e", "t"], "=", 
+      RowBox[{
+       SubsuperscriptBox["\[Sum]", 
+        RowBox[{"i", "=", "0"}], "\[Infinity]"], 
+       FractionBox[
+        SuperscriptBox["t", "i"], 
+        RowBox[{"i", "!"}]]}], 
+      RowBox[{"for", "|", "t", "|", 
+       RowBox[{"<", "\[Infinity]"}]}]},
+     {
+      RowBox[{"sin", "(", "t", ")"}], "=", 
+      RowBox[{
+       SubsuperscriptBox["\[Sum]", 
+        RowBox[{"i", "=", "0"}], "\[Infinity]"], 
+       RowBox[{
+        SuperscriptBox[
+         RowBox[{"(", 
+          RowBox[{"-", "1"}], ")"}], "i"], 
+        FractionBox[
+         SuperscriptBox["t", 
+          RowBox[{
+           RowBox[{"2", "i"}], "+", "1"}]], 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"2", "i"}], "+", "1"}], ")"}], "!"}]]}]}], 
+      RowBox[{"for", "|", "t", "|", 
+       RowBox[{"<", "\[Infinity]"}]}]},
+     {
+      RowBox[{"cos", "(", "t", ")"}], "=", 
+      RowBox[{
+       SubsuperscriptBox["\[Sum]", 
+        RowBox[{"i", "=", "0"}], "\[Infinity]"], 
+       RowBox[{
+        SuperscriptBox[
+         RowBox[{"(", 
+          RowBox[{"-", "1"}], ")"}], "i"], 
+        FractionBox[
+         SuperscriptBox["t", 
+          RowBox[{"2", "i"}]], 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"2", "i"}], ")"}], "!"}]]}]}], 
+      RowBox[{"for", "|", "t", "|", 
+       RowBox[{"<", "\[Infinity]"}]}]},
+     {
+      RowBox[{"log", "(", 
+       RowBox[{"1", "+", "t"}], ")"}], "=", 
+      RowBox[{
+       SubsuperscriptBox["\[Sum]", 
+        RowBox[{"i", "=", "1"}], "\[Infinity]"], 
+       RowBox[{
+        SuperscriptBox[
+         RowBox[{"(", 
+          RowBox[{"-", "1"}], ")"}], "i"], 
+        FractionBox[
+         SuperscriptBox["t", "i"], "i"]}]}], 
+      RowBox[{"for", "|", "t", "|", 
+       RowBox[{"<", "1"}]}]}
+    }], TraditionalForm]],ExpressionUUID->
+  "8401c914-4299-4986-ba24-a9abd73a361e"],
+ " "
+}], "Text",
+ CellChangeTimes->{{3.9580411614558077`*^9, 3.958041210851841*^9}, {
+   3.9580412545811877`*^9, 3.9580412576740503`*^9}, {3.9580413128222213`*^9, 
+   3.958041514527623*^9}, 3.9580415710705805`*^9, {3.9580416106482134`*^9, 
+   3.9580416410664763`*^9}, {3.9581268722205095`*^9, 
+   3.9581270891197844`*^9}, {3.9581285512258077`*^9, 
+   3.9581286018846364`*^9}, {3.9581287460552096`*^9, 
+   3.9581288239750643`*^9}, {3.958129161211339*^9, 3.9581291837756767`*^9}, {
+   3.9581292665935197`*^9, 3.958129276998253*^9}, {3.958129333982195*^9, 
+   3.9581297699092426`*^9}, {3.9609734801921377`*^9, 
+   3.9609735294652324`*^9}},ExpressionUUID->"1794fcb4-7f19-4b11-b87e-\
+79e7e2381724"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Series", "[", 
+  RowBox[{
+   RowBox[{"Log", "[", 
+    RowBox[{"1", "+", "t"}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"t", ",", "0", ",", "12"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.9581297322553463`*^9, 3.9581297416401606`*^9}},
+ CellLabel->"In[6]:=",ExpressionUUID->"68f29625-686b-453b-ac7c-7b994ba4094f"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"t", "-", 
+   FractionBox[
+    SuperscriptBox["t", "2"], "2"], "+", 
+   FractionBox[
+    SuperscriptBox["t", "3"], "3"], "-", 
+   FractionBox[
+    SuperscriptBox["t", "4"], "4"], "+", 
+   FractionBox[
+    SuperscriptBox["t", "5"], "5"], "-", 
+   FractionBox[
+    SuperscriptBox["t", "6"], "6"], "+", 
+   FractionBox[
+    SuperscriptBox["t", "7"], "7"], "-", 
+   FractionBox[
+    SuperscriptBox["t", "8"], "8"], "+", 
+   FractionBox[
+    SuperscriptBox["t", "9"], "9"], "-", 
+   FractionBox[
+    SuperscriptBox["t", "10"], "10"], "+", 
+   FractionBox[
+    SuperscriptBox["t", "11"], "11"], "-", 
+   FractionBox[
+    SuperscriptBox["t", "12"], "12"], "+", 
+   InterpretationBox[
+    SuperscriptBox[
+     RowBox[{"O", "[", "t", "]"}], "13"],
+    SeriesData[$CellContext`t, 0, {}, 1, 13, 1],
+    Editable->False]}],
+  SeriesData[$CellContext`t, 0, {1, 
+    Rational[-1, 2], 
+    Rational[1, 3], 
+    Rational[-1, 4], 
+    Rational[1, 5], 
+    Rational[-1, 6], 
+    Rational[1, 7], 
+    Rational[-1, 8], 
+    Rational[1, 9], 
+    Rational[-1, 10], 
+    Rational[1, 11], 
+    Rational[-1, 12]}, 1, 13, 1],
+  Editable->False]], "Output",
+ CellChangeTimes->{3.9581297428884687`*^9},
+ CellLabel->"Out[6]=",ExpressionUUID->"6c8c4b98-60af-4dcf-86dc-6682a013922c"]
+}, Open  ]],
+
+Cell[TextData[{
+ "For ",
+ "smooth",
+ " ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"f", ":", "\[DoubleStruckCapitalR]"}], "\[Rule]", 
+    SuperscriptBox["\[DoubleStruckCapitalR]", "n"]}], TraditionalForm]],
+  ExpressionUUID->"00f3ce0b-fb05-4de7-8f9a-4f0cf38b28c2"],
+ " the power series  \n\t",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"f", "(", "t", ")"}], "~", 
+    RowBox[{
+     SubsuperscriptBox["\[Sum]", 
+      RowBox[{"i", "=", "0"}], "\[Infinity]"], 
+     RowBox[{
+      FractionBox[
+       RowBox[{
+        SuperscriptBox["f", 
+         RowBox[{"(", "i", ")"}]], "(", "0", ")"}], 
+       RowBox[{"i", "!"}]], 
+      SuperscriptBox["t", "i"]}]}]}], TraditionalForm]],ExpressionUUID->
+  "6ce2ee5a-f5c2-4e2c-8eb1-eef463d6982e"],
+ " \nmatches derivatives of all orders ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     SuperscriptBox["f", 
+      RowBox[{"(", "0", ")"}]], "(", "0", ")"}], "=", 
+    RowBox[{"f", "(", "0", ")"}]}], TraditionalForm]],ExpressionUUID->
+  "ff3c844c-1934-43c3-a56f-d45479998e36"],
+ ", ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     SuperscriptBox["f", 
+      RowBox[{"(", "1", ")"}]], "(", "0", ")"}], "=", 
+    RowBox[{
+     RowBox[{"f", "'"}], 
+     RowBox[{"(", "0", ")"}]}]}], TraditionalForm]],ExpressionUUID->
+  "27540ab3-8017-4791-b3f3-6c5255c42755"],
+ ", ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     SuperscriptBox["f", 
+      RowBox[{"(", "2", ")"}]], "(", "0", ")"}], "=", 
+    RowBox[{
+     RowBox[{"f", "''"}], 
+     RowBox[{"(", "0", ")"}]}]}], TraditionalForm]],ExpressionUUID->
+  "00fe887e-1ee2-465b-ad80-a533c23c204b"],
+ ", \[Ellipsis] at ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"t", "=", "0"}], TraditionalForm]],ExpressionUUID->
+  "47cb853f-805c-40e4-8189-90a71cda2d88"],
  ".  Functions are frequently defined (inside some radius of convergence) by \
 a power series.  For instance,\n\t",
  Cell[BoxData[
@@ -472,9 +671,8 @@ a power series.  For instance,\n\t",
          SuperscriptBox["t", "i"], "i"]}]}], 
       RowBox[{"for", "|", "t", "|", 
        RowBox[{"<", "1"}]}]}
-    }], TraditionalForm]],
-  FormatType->TraditionalForm,ExpressionUUID->
-  "8401c914-4299-4986-ba24-a9abd73a361e"],
+    }], TraditionalForm]],ExpressionUUID->
+  "436c4b03-9a72-4941-b022-25982506b29f"],
  " "
 }], "Text",
  CellChangeTimes->{{3.9580411614558077`*^9, 3.958041210851841*^9}, {
@@ -485,67 +683,92 @@ a power series.  For instance,\n\t",
    3.9581286018846364`*^9}, {3.9581287460552096`*^9, 
    3.9581288239750643`*^9}, {3.958129161211339*^9, 3.9581291837756767`*^9}, {
    3.9581292665935197`*^9, 3.958129276998253*^9}, {3.958129333982195*^9, 
-   3.9581297699092426`*^9}},ExpressionUUID->"1794fcb4-7f19-4b11-b87e-\
-79e7e2381724"],
+   3.9581297699092426`*^9}},ExpressionUUID->"13766263-aad1-46d2-864b-\
+8edb9d29b8f2"],
 
-Cell[CellGroupData[{
-
-Cell[BoxData[
- RowBox[{"Series", "[", 
-  RowBox[{
-   RowBox[{"Log", "[", 
-    RowBox[{"1", "+", "t"}], "]"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"t", ",", "0", ",", "12"}], "}"}]}], "]"}]], "Input",
- CellChangeTimes->{{3.9581297322553463`*^9, 3.9581297416401606`*^9}},
- CellLabel->"In[6]:=",ExpressionUUID->"68f29625-686b-453b-ac7c-7b994ba4094f"],
-
-Cell[BoxData[
- InterpretationBox[
-  RowBox[{"t", "-", 
-   FractionBox[
-    SuperscriptBox["t", "2"], "2"], "+", 
-   FractionBox[
-    SuperscriptBox["t", "3"], "3"], "-", 
-   FractionBox[
-    SuperscriptBox["t", "4"], "4"], "+", 
-   FractionBox[
-    SuperscriptBox["t", "5"], "5"], "-", 
-   FractionBox[
-    SuperscriptBox["t", "6"], "6"], "+", 
-   FractionBox[
-    SuperscriptBox["t", "7"], "7"], "-", 
-   FractionBox[
-    SuperscriptBox["t", "8"], "8"], "+", 
-   FractionBox[
-    SuperscriptBox["t", "9"], "9"], "-", 
-   FractionBox[
-    SuperscriptBox["t", "10"], "10"], "+", 
-   FractionBox[
-    SuperscriptBox["t", "11"], "11"], "-", 
-   FractionBox[
-    SuperscriptBox["t", "12"], "12"], "+", 
-   InterpretationBox[
-    SuperscriptBox[
-     RowBox[{"O", "[", "t", "]"}], "13"],
-    SeriesData[$CellContext`t, 0, {}, 1, 13, 1],
-    Editable->False]}],
-  SeriesData[$CellContext`t, 0, {1, 
-    Rational[-1, 2], 
-    Rational[1, 3], 
-    Rational[-1, 4], 
-    Rational[1, 5], 
-    Rational[-1, 6], 
-    Rational[1, 7], 
-    Rational[-1, 8], 
-    Rational[1, 9], 
-    Rational[-1, 10], 
-    Rational[1, 11], 
-    Rational[-1, 12]}, 1, 13, 1],
-  Editable->False]], "Output",
- CellChangeTimes->{3.9581297428884687`*^9},
- CellLabel->"Out[6]=",ExpressionUUID->"6c8c4b98-60af-4dcf-86dc-6682a013922c"]
-}, Open  ]]
+Cell[TextData[{
+ "Power series are much more complicated for ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"f", ":", 
+     SuperscriptBox["\[DoubleStruckCapitalR]", "m"]}], "\[Rule]", 
+    SuperscriptBox["\[DoubleStruckCapitalR]", "n"]}], TraditionalForm]],
+  ExpressionUUID->"a0188f41-c8ad-424e-b1c4-097681462258"],
+ " because the structure of higher derivatives is more complicated: ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"Df", ":", 
+     SuperscriptBox["\[DoubleStruckCapitalR]", "m"]}], "\[Rule]", 
+    SuperscriptBox["\[DoubleStruckCapitalR]", 
+     RowBox[{"n", "\[Times]", "m"}]]}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "a061c770-9107-4289-8907-2e7980726d03"],
+ " and ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"DDf", ":", 
+     SuperscriptBox["\[DoubleStruckCapitalR]", "m"]}], "\[Rule]", 
+    SuperscriptBox["\[DoubleStruckCapitalR]", 
+     RowBox[{"n", "\[Times]", "m", "\[Times]", "m"}]]}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "51b17252-77f8-4816-a3d6-bc212ede975d"],
+ ".  In words: ",
+ Cell[BoxData[
+  FormBox["f", TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "ed4554c7-3b6c-45a2-8cf0-04dd28e06ece"],
+ " is a vector represented by the components ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["f", "i"], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "dde7f34c-c12a-445b-8b19-b12ea27e409c"],
+ "; ",
+ Cell[BoxData[
+  FormBox["Df", TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "01235b63-1221-41fc-8c4b-c38f45b84da0"],
+ " is a matrix represented by the components ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"\[PartialD]", 
+     SubscriptBox["f", "i"]}], "/", 
+    RowBox[{"\[PartialD]", 
+     SubscriptBox["x", "j"]}]}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "58444e29-856e-4b19-a35e-ee26b10e5080"],
+ "; DDf is a tensor represented by the components ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      SuperscriptBox["\[PartialD]", "2"], 
+      SubscriptBox["f", "i"]}], "/", 
+     RowBox[{"\[PartialD]", 
+      SubscriptBox["x", "j"]}]}], 
+    RowBox[{"\[PartialD]", 
+     SubscriptBox["x", "k"]}]}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "a3060c19-cd80-42dc-82cb-08e3d789cf81"],
+ ". "
+}], "Text",
+ CellChangeTimes->{{3.9580411614558077`*^9, 3.958041210851841*^9}, {
+   3.9580412545811877`*^9, 3.9580412576740503`*^9}, {3.9580413128222213`*^9, 
+   3.958041514527623*^9}, 3.9580415710705805`*^9, {3.9580416106482134`*^9, 
+   3.9580416410664763`*^9}, {3.9581268722205095`*^9, 
+   3.9581270891197844`*^9}, {3.9581285512258077`*^9, 
+   3.9581286018846364`*^9}, {3.9581287460552096`*^9, 
+   3.9581288239750643`*^9}, {3.958129161211339*^9, 3.9581291837756767`*^9}, {
+   3.9581292665935197`*^9, 3.958129276998253*^9}, {3.958129333982195*^9, 
+   3.9581297699092426`*^9}, {3.9609734801921377`*^9, 
+   3.9609735294652324`*^9}, {3.960973572199931*^9, 
+   3.9609739095409327`*^9}},ExpressionUUID->"08e44d9b-4519-41ac-b60e-\
+be6337ec7660"]
 }, Closed]],
 
 Cell[CellGroupData[{
@@ -3073,45 +3296,47 @@ Cell[CellGroupData[{
 Cell[9618, 305, 661, 18, 71, "Input",ExpressionUUID->"255b7fff-c20c-41f4-bff2-d0de07e8233b"],
 Cell[10282, 325, 216, 4, 48, "Output",ExpressionUUID->"4937b840-16b4-4cb4-9ca4-06085223999d"]
 }, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[10547, 335, 352, 5, 100, "Section",ExpressionUUID->"e012dd2d-9a6b-402c-83bf-74556cb5caf3"],
+Cell[10902, 342, 4719, 144, 384, "Text",ExpressionUUID->"1794fcb4-7f19-4b11-b87e-79e7e2381724"],
+Cell[CellGroupData[{
+Cell[15646, 490, 346, 8, 42, "Input",ExpressionUUID->"68f29625-686b-453b-ac7c-7b994ba4094f"],
+Cell[15995, 500, 1296, 44, 71, "Output",ExpressionUUID->"6c8c4b98-60af-4dcf-86dc-6682a013922c"]
+}, Open  ]],
+Cell[17306, 547, 4470, 139, 350, "Text",ExpressionUUID->"13766263-aad1-46d2-864b-8edb9d29b8f2"],
+Cell[21779, 688, 3087, 82, 159, "Text",ExpressionUUID->"08e44d9b-4519-41ac-b60e-be6337ec7660"]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[10547, 335, 352, 5, 77, "Section",ExpressionUUID->"e012dd2d-9a6b-402c-83bf-74556cb5caf3"],
-Cell[10902, 342, 4687, 146, 350, "Text",ExpressionUUID->"1794fcb4-7f19-4b11-b87e-79e7e2381724"],
-Cell[CellGroupData[{
-Cell[15614, 492, 346, 8, 42, "Input",ExpressionUUID->"68f29625-686b-453b-ac7c-7b994ba4094f"],
-Cell[15963, 502, 1296, 44, 71, "Output",ExpressionUUID->"6c8c4b98-60af-4dcf-86dc-6682a013922c"]
-}, Open  ]]
+Cell[24903, 775, 360, 6, 77, "Section",ExpressionUUID->"c3d31d08-874d-4d90-b8fb-aaebc1679655"],
+Cell[25266, 783, 4378, 129, 382, "Text",ExpressionUUID->"62842d1d-7a2e-456d-b7aa-8d3bd0631359"]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[17308, 552, 360, 6, 77, "Section",ExpressionUUID->"c3d31d08-874d-4d90-b8fb-aaebc1679655"],
-Cell[17671, 560, 4378, 129, 382, "Text",ExpressionUUID->"62842d1d-7a2e-456d-b7aa-8d3bd0631359"]
+Cell[29681, 917, 436, 6, 77, "Section",ExpressionUUID->"97e4861f-d7eb-49ee-bfa2-0f1d42f2786c"],
+Cell[30120, 925, 919, 16, 87, "Text",ExpressionUUID->"565e2cfa-dc10-402d-9dc7-c85558287dd6"],
+Cell[31042, 943, 1518, 39, 90, "Text",ExpressionUUID->"3b0cc60b-4f87-4f8e-8467-9e5cffa9a57d"],
+Cell[32563, 984, 1713, 46, 125, "Text",ExpressionUUID->"e1cf99bb-422f-4dab-920e-fc03d4670636"],
+Cell[34279, 1032, 2348, 60, 159, "Text",ExpressionUUID->"39958c2e-b639-4534-a3d2-d14afa54d892"]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[22086, 694, 436, 6, 77, "Section",ExpressionUUID->"97e4861f-d7eb-49ee-bfa2-0f1d42f2786c"],
-Cell[22525, 702, 919, 16, 87, "Text",ExpressionUUID->"565e2cfa-dc10-402d-9dc7-c85558287dd6"],
-Cell[23447, 720, 1518, 39, 90, "Text",ExpressionUUID->"3b0cc60b-4f87-4f8e-8467-9e5cffa9a57d"],
-Cell[24968, 761, 1713, 46, 125, "Text",ExpressionUUID->"e1cf99bb-422f-4dab-920e-fc03d4670636"],
-Cell[26684, 809, 2348, 60, 159, "Text",ExpressionUUID->"39958c2e-b639-4534-a3d2-d14afa54d892"]
-}, Closed]],
+Cell[36664, 1097, 474, 7, 77, "Section",ExpressionUUID->"35c282ce-4f16-4237-9314-d983c4eca1e4"],
+Cell[37141, 1106, 1646, 39, 52, "Text",ExpressionUUID->"9c585fbe-bf11-44ea-bc2e-f837a8e5f6a1"],
 Cell[CellGroupData[{
-Cell[29069, 874, 474, 7, 77, "Section",ExpressionUUID->"35c282ce-4f16-4237-9314-d983c4eca1e4"],
-Cell[29546, 883, 1646, 39, 52, "Text",ExpressionUUID->"9c585fbe-bf11-44ea-bc2e-f837a8e5f6a1"],
+Cell[38812, 1149, 163, 3, 67, "Subsubsection",ExpressionUUID->"c373d6f6-26d9-4a92-ba00-f3da2d984954"],
+Cell[38978, 1154, 191, 3, 52, "Text",ExpressionUUID->"7e5fe70d-497f-4ff5-bf2b-9e1be7b49a55"],
 Cell[CellGroupData[{
-Cell[31217, 926, 163, 3, 67, "Subsubsection",ExpressionUUID->"c373d6f6-26d9-4a92-ba00-f3da2d984954"],
-Cell[31383, 931, 191, 3, 52, "Text",ExpressionUUID->"7e5fe70d-497f-4ff5-bf2b-9e1be7b49a55"],
-Cell[CellGroupData[{
-Cell[31599, 938, 1401, 40, 243, "Input",ExpressionUUID->"1c84d059-23a4-4828-b69a-7a091e8b2adc"],
-Cell[33003, 980, 21082, 392, 371, "Output",ExpressionUUID->"069f0b35-23e4-43e9-bd0b-542ae3ccf1e7"]
+Cell[39194, 1161, 1401, 40, 243, "Input",ExpressionUUID->"1c84d059-23a4-4828-b69a-7a091e8b2adc"],
+Cell[40598, 1203, 21082, 392, 355, "Output",ExpressionUUID->"069f0b35-23e4-43e9-bd0b-542ae3ccf1e7"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[54134, 1378, 163, 3, 67, "Subsubsection",ExpressionUUID->"e74404ad-a585-49d0-9628-fb5845e8d873"],
-Cell[54300, 1383, 191, 3, 52, "Text",ExpressionUUID->"3d55cbd4-86db-4ac3-b44b-cbb879807b9a"],
+Cell[61729, 1601, 163, 3, 67, "Subsubsection",ExpressionUUID->"e74404ad-a585-49d0-9628-fb5845e8d873"],
+Cell[61895, 1606, 191, 3, 52, "Text",ExpressionUUID->"3d55cbd4-86db-4ac3-b44b-cbb879807b9a"],
 Cell[CellGroupData[{
-Cell[54516, 1390, 2188, 66, 275, "Input",ExpressionUUID->"f0dd37ac-a221-44dd-87d2-59aac101afe3"],
-Cell[56707, 1458, 770, 23, 48, "Output",ExpressionUUID->"874424ad-4b0b-4c4a-8f3f-7a6c59ce7d3a"],
-Cell[57480, 1483, 497, 13, 48, "Output",ExpressionUUID->"fcbe2845-2b81-4825-bdd5-9b126e6d6dd9"],
-Cell[57980, 1498, 92677, 1536, 501, "Output",ExpressionUUID->"b33a79d9-4c47-4bba-83a0-c46ae43e956d"]
+Cell[62111, 1613, 2188, 66, 275, "Input",ExpressionUUID->"f0dd37ac-a221-44dd-87d2-59aac101afe3"],
+Cell[64302, 1681, 770, 23, 48, "Output",ExpressionUUID->"874424ad-4b0b-4c4a-8f3f-7a6c59ce7d3a"],
+Cell[65075, 1706, 497, 13, 48, "Output",ExpressionUUID->"fcbe2845-2b81-4825-bdd5-9b126e6d6dd9"],
+Cell[65575, 1721, 92677, 1536, 501, "Output",ExpressionUUID->"b33a79d9-4c47-4bba-83a0-c46ae43e956d"]
 }, Open  ]]
 }, Closed]]
 }, Open  ]]
