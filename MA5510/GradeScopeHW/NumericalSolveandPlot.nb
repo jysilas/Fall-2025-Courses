@@ -1,0 +1,209 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      6876,        201]
+NotebookOptionsPosition[      5556,        170]
+NotebookOutlinePosition[      6354,        194]
+CellTagsIndexPosition[      6311,        191]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox[
+   FrameBox[GridBox[{
+      {
+       StyleBox["Name",
+        FontSize->18], 
+       StyleBox["                                             ",
+        FontSize->18]},
+      {
+       StyleBox[" ",
+        FontSize->18], 
+       StyleBox[" ",
+        FontSize->18]}
+     }]], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "a755cf8b-48b8-426b-9ec6-e5f528b8a8fd"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   FrameBox[GridBox[{
+      {
+       StyleBox[
+        RowBox[{"M", "#"}],
+        FontSize->18], 
+       StyleBox["                                             ",
+        FontSize->18]},
+      {
+       StyleBox[" ",
+        FontSize->18], 
+       StyleBox[" ",
+        FontSize->18]}
+     }]], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "6c33ac9a-7343-4220-9e82-491fccca1e70"]
+}], "Title",
+ CellChangeTimes->{{3.9645161932290115`*^9, 
+  3.9645162715191965`*^9}},ExpressionUUID->"7fd4ccc4-2df5-478f-aa96-\
+ee55f77476ca"],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+Numerically solve and plot (in phase space and separately) a solution of \
+\>", "ItemNumbered",
+ CellChangeTimes->{{3.964516285260607*^9, 3.9645163230093327`*^9}, {
+  3.9645163947891617`*^9, 3.964516425741819*^9}, {3.9645181655068445`*^9, 
+  3.96451818564034*^9}, {3.964518250241906*^9, 3.9645182548418465`*^9}, {
+  3.96451835206209*^9, 3.9645183534271317`*^9}, {3.96451882608692*^9, 
+  3.964518843920486*^9}},ExpressionUUID->"934a7a65-20f9-4223-a769-\
+56ce75216236"],
+
+Cell[TextData[Cell[BoxData[
+ FormBox[GridBox[{
+    {
+     RowBox[{"x", "'"}], "=", 
+     RowBox[{
+      RowBox[{"-", "y"}], "-", "z"}]},
+    {
+     RowBox[{"y", "'"}], "=", 
+     RowBox[{"x", "+", " ", 
+      RowBox[{"a", " ", "y"}]}]},
+    {
+     RowBox[{"z", "'"}], "=", 
+     RowBox[{"b", "+", 
+      RowBox[{"z", "(", 
+       RowBox[{"x", "-", "c"}], ")"}]}]}
+   }], TraditionalForm]],
+ FormatType->
+  TraditionalForm,ExpressionUUID->"2d04bc17-c172-448d-87aa-643ea1d7851a"]], \
+"ItemParagraph",
+ CellChangeTimes->{{3.9645163559004545`*^9, 3.964516355901452*^9}, {
+  3.9645182643567924`*^9, 3.9645183620768337`*^9}},
+ FontSize->14,ExpressionUUID->"b0bc4e89-7b95-4d03-82ab-14329e0f4cfe"],
+
+Cell[TextData[{
+ "with ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"a", "=", 
+    RowBox[{"b", "=", "0.2"}]}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "20be843d-a42b-45fc-bb99-7eaf2931c5d9"],
+ " and ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"c", "=", "5.7"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "5efe2f57-b0ca-40f8-afdd-40bc85f1c587"],
+ ".  Describe the solution in words.  Show your code and plots. "
+}], "ItemParagraph",
+ CellChangeTimes->{{3.9645163559004545`*^9, 3.964516355901452*^9}, {
+   3.9645182643567924`*^9, 3.9645183949611764`*^9}, {3.9645184607436085`*^9, 
+   3.9645184682210503`*^9}, {3.9645185150970354`*^9, 3.964518526097322*^9}, 
+   3.9645189379705133`*^9},
+ FontSize->14,ExpressionUUID->"e156e44d-d5ad-4007-9078-a428ee8f9271"]
+}, Open  ]],
+
+Cell[TextData[{
+ "Repeat Q1 with with ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"a", "=", 
+    RowBox[{"b", "=", "0.1"}]}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "a8ed012d-c778-496f-8178-2f1a3af07392"],
+ " and ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"c", "=", "14.0"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "36d5cb66-c928-464f-bcd8-fc8eac5b768c"],
+ ".  Describe the solution in words.  Show your code and plots. "
+}], "ItemNumbered",
+ CellChangeTimes->{{3.964516285260607*^9, 3.9645163230093327`*^9}, {
+   3.9645163947891617`*^9, 3.964516425741819*^9}, {3.9645181655068445`*^9, 
+   3.96451818564034*^9}, {3.964518250241906*^9, 3.9645182548418465`*^9}, {
+   3.96451835206209*^9, 3.9645183534271317`*^9}, {3.964518412415654*^9, 
+   3.9645184919348245`*^9}, {3.9645185319108305`*^9, 3.964518532558299*^9}, 
+   3.9645189403537703`*^9},ExpressionUUID->"5f97fd03-2ca2-4510-b988-\
+890c8994f8f8"],
+
+Cell[TextData[{
+ "Repeat Q1 with with ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"a", "=", 
+    RowBox[{"b", "=", "0.1"}]}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "b20004dc-f939-4670-a583-3085ec1f9ae7"],
+ " and ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"c", "=", "5.0"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "3129433b-5b42-4a49-b558-f621a1a2533d"],
+ ".  Describe the solution in words.  Show your code and plots. "
+}], "ItemNumbered",
+ CellChangeTimes->{{3.964516285260607*^9, 3.9645163230093327`*^9}, {
+   3.9645163947891617`*^9, 3.964516425741819*^9}, {3.9645181655068445`*^9, 
+   3.96451818564034*^9}, {3.964518250241906*^9, 3.9645182548418465`*^9}, {
+   3.96451835206209*^9, 3.9645183534271317`*^9}, {3.964518412415654*^9, 
+   3.9645184919348245`*^9}, {3.9645185319108305`*^9, 3.964518532558299*^9}, {
+   3.9645185823983617`*^9, 3.96451858279863*^9}, 
+   3.9645189417204294`*^9},ExpressionUUID->"04ef323b-b4c0-4df9-97ae-\
+67a76ab2671d"]
+}, Open  ]]
+},
+WindowToolbars->{"RulerBar", "MultipurposeBar"},
+WindowSize->{1115, 458.5},
+WindowMargins->{{-1209.5, Automatic}, {Automatic, -423.5}},
+TaggingRules-><|"TryRealOnly" -> False|>,
+FrontEndVersion->"13.3 for Microsoft Windows (64-bit) (July 24, 2023)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[StyleDefinitions -> "Default.nb"]]}, 
+  WindowSize -> {582.6, 494.4}, 
+  WindowMargins -> {{0, Automatic}, {Automatic, 0}}, Visible -> False, 
+  FrontEndVersion -> "13.3 for Microsoft Windows (64-bit) (July 24, 2023)", 
+  StyleDefinitions -> "PrivateStylesheetFormatting.nb"],
+ExpressionUUID->"f6779469-9108-4620-a69f-3493cafa28ae"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 1002, 38, 158, "Title",ExpressionUUID->"7fd4ccc4-2df5-478f-aa96-ee55f77476ca"],
+Cell[CellGroupData[{
+Cell[1607, 64, 477, 8, 32, "ItemNumbered",ExpressionUUID->"934a7a65-20f9-4223-a769-56ce75216236"],
+Cell[2087, 74, 689, 21, 56, "ItemParagraph",ExpressionUUID->"b0bc4e89-7b95-4d03-82ab-14329e0f4cfe"],
+Cell[2779, 97, 799, 20, 23, "ItemParagraph",ExpressionUUID->"e156e44d-d5ad-4007-9078-a428ee8f9271"]
+}, Open  ]],
+Cell[3593, 120, 947, 22, 32, "ItemNumbered",ExpressionUUID->"5f97fd03-2ca2-4510-b988-890c8994f8f8"],
+Cell[4543, 144, 997, 23, 32, "ItemNumbered",ExpressionUUID->"04ef323b-b4c0-4df9-97ae-67a76ab2671d"]
+}, Open  ]]
+}
+]
+*)
+
