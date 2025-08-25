@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      8443,        254]
-NotebookOptionsPosition[      6254,        206]
-NotebookOutlinePosition[      7052,        230]
-CellTagsIndexPosition[      7009,        227]
+NotebookDataLength[      7748,        232]
+NotebookOptionsPosition[      5873,        190]
+NotebookOutlinePosition[      6591,        212]
+CellTagsIndexPosition[      6548,        209]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -63,11 +63,12 @@ ee55f77476ca"],
 Cell[CellGroupData[{
 
 Cell["\<\
-Do you know how to numerically solve a system of ODEs and plot the solution?\
+Do you know how to numerically solve a system of ODEs and plot the solution?  \
+What languages can you do this in? \
 \>", "ItemNumbered",
  CellChangeTimes->{{3.964516285260607*^9, 3.9645163230093327`*^9}, {
-  3.9645163947891617`*^9, 
-  3.964516425741819*^9}},ExpressionUUID->"712e1d6a-f622-4203-9fa2-\
+  3.9645163947891617`*^9, 3.964516425741819*^9}, {3.965047954051296*^9, 
+  3.965047966549657*^9}},ExpressionUUID->"712e1d6a-f622-4203-9fa2-\
 a9286dc40b73"],
 
 Cell["", "ItemParagraph",
@@ -87,15 +88,14 @@ Cell[TextData[{
      RowBox[{"3", 
       RowBox[{"y", "''"}]}], "+", 
      RowBox[{"2", "y"}]}], "=", 
-    SuperscriptBox["t", "2"]}], TraditionalForm]],
-  FormatType->TraditionalForm,ExpressionUUID->
+    SuperscriptBox["t", "2"]}], TraditionalForm]],ExpressionUUID->
   "fa0411a4-5e94-420e-8473-07142abf2105"],
- "?  If so outline the process for me and explain an appropriate set of \
-initial conditions."
+ "?  Tell me an appropriate set of initial conditions."
 }], "ItemNumbered",
  CellChangeTimes->{{3.964516285260607*^9, 3.9645163230093327`*^9}, {
   3.9645163947891617`*^9, 3.964516495824437*^9}, {3.9645167311609735`*^9, 
-  3.9645167965139017`*^9}},ExpressionUUID->"84993057-9b6e-4ada-a835-\
+  3.9645167965139017`*^9}, {3.9650476718710227`*^9, 
+  3.9650476740585113`*^9}},ExpressionUUID->"84993057-9b6e-4ada-a835-\
 a5d1615866f9"],
 
 Cell["", "ItemParagraph",
@@ -127,16 +127,14 @@ Cell[TextData[{
         SubscriptBox["y", "2"]}], "+", 
        SubscriptBox["y", "1"], "-", 
        SuperscriptBox["t", "2"]}]}
-    }], TraditionalForm]],
-  FormatType->TraditionalForm,ExpressionUUID->
+    }], TraditionalForm]],ExpressionUUID->
   "c4fc6db5-4687-4780-86cb-0dd57b4d6ff5"],
- "? If so outline the process for me and explain an appropriate set of \
-initial conditions."
+ "? Tell me an appropriate set of initial conditions."
 }], "ItemNumbered",
  CellChangeTimes->{{3.964516285260607*^9, 3.9645163230093327`*^9}, {
-  3.9645163947891617`*^9, 3.96451660932492*^9}, {3.9645167548437085`*^9, 
-  3.9645167614792595`*^9}, {3.9645168043825483`*^9, 
-  3.9645168079304304`*^9}},ExpressionUUID->"fcd87fe9-28e0-4d18-a173-\
+   3.9645163947891617`*^9, 3.96451660932492*^9}, {3.9645167548437085`*^9, 
+   3.9645167614792595`*^9}, {3.9645168043825483`*^9, 3.9645168079304304`*^9}, 
+   3.9650476964790087`*^9},ExpressionUUID->"fcd87fe9-28e0-4d18-a173-\
 6562315d00e3"],
 
 Cell["", "ItemParagraph",
@@ -157,14 +155,13 @@ Cell[TextData[{
      FractionBox["1", 
       RowBox[{"2", "+", 
        RowBox[{"cos", "(", "t", ")"}]}]], "?"}]}], TraditionalForm]],
-  FormatType->TraditionalForm,ExpressionUUID->
-  "849a365b-a402-4ecd-8239-d9cc2a7c5592"],
- " If so outline the process for me and explain an appropriate set of initial \
-conditions."
+  ExpressionUUID->"849a365b-a402-4ecd-8239-d9cc2a7c5592"],
+ "  What is the technique called? "
 }], "ItemNumbered",
  CellChangeTimes->{{3.964516285260607*^9, 3.9645163230093327`*^9}, {
   3.9645163947891617`*^9, 3.96451672572845*^9}, {3.964516826263975*^9, 
-  3.964516828699324*^9}},ExpressionUUID->"4093afb5-7c1a-48fb-859c-\
+  3.964516828699324*^9}, {3.965047703762577*^9, 
+  3.965047720705265*^9}},ExpressionUUID->"4093afb5-7c1a-48fb-859c-\
 6593fc8b68b8"],
 
 Cell["", "ItemParagraph",
@@ -175,48 +172,33 @@ Cell["", "ItemParagraph",
 Cell[CellGroupData[{
 
 Cell["\<\
-Do you know an existence and uniqueness theorem for ODEs?  If so outline the \
-what it means and why it matters. \
+Do you know an existence and uniqueness theorem for ODEs?  Tell me a name for \
+the theorem that will work on Wikipedia.  \
 \>", "ItemNumbered",
  CellChangeTimes->{{3.964516285260607*^9, 3.9645163230093327`*^9}, {
   3.9645163947891617`*^9, 3.96451672572845*^9}, {3.964516826263975*^9, 
-  3.9645168878306847`*^9}},ExpressionUUID->"402f86ed-f46f-47a2-a300-\
+  3.9645168878306847`*^9}, {3.9650477299538536`*^9, 3.9650477502152576`*^9}, {
+  3.965047793932442*^9, 
+  3.96504782457015*^9}},ExpressionUUID->"402f86ed-f46f-47a2-a300-\
 785e01a07dd4"],
 
 Cell["", "ItemParagraph",
  CellChangeTimes->{{3.9645163559004545`*^9, 3.964516355901452*^9}},
  FontSize->72,ExpressionUUID->"2aba2573-ec36-48bf-bf84-d0d4c0924fd7"]
-}, Open  ]],
-
-Cell[CellGroupData[{
-
-Cell["\<\
-(no points here) Describe your previous experience with ODEs.\
-\>", "ItemNumbered",
- CellChangeTimes->{{3.964516285260607*^9, 3.9645163230093327`*^9}, {
-  3.9645169248027077`*^9, 
-  3.9645169325326743`*^9}},ExpressionUUID->"b6fc3c8a-a5c6-4f0f-8bde-\
-97e1624698fb"],
-
-Cell["", "ItemParagraph",
- CellChangeTimes->{{3.9645163559004545`*^9, 3.964516355901452*^9}},
- FontSize->72,ExpressionUUID->"5403fd82-403d-4e1c-922a-a62ba806745d"]
 }, Open  ]]
 }, Open  ]]
 },
 WindowToolbars->{"RulerBar", "MultipurposeBar"},
-WindowSize->{1115, 458.5},
-WindowMargins->{{-1209.5, Automatic}, {Automatic, -423.5}},
+WindowSize->{1114.8, 459},
+WindowMargins->{{0, Automatic}, {Automatic, 57.599999999999994`}},
 TaggingRules-><|"TryRealOnly" -> False|>,
 FrontEndVersion->"13.3 for Microsoft Windows (64-bit) (July 24, 2023)",
 StyleDefinitions->Notebook[{
    Cell[
-    StyleData[StyleDefinitions -> "Default.nb"]]}, 
-  WindowSize -> {582.6, 494.4}, 
-  WindowMargins -> {{0, Automatic}, {Automatic, 0}}, Visible -> False, 
+    StyleData[StyleDefinitions -> "Default.nb"]]}, Visible -> False, 
   FrontEndVersion -> "13.3 for Microsoft Windows (64-bit) (July 24, 2023)", 
   StyleDefinitions -> "PrivateStylesheetFormatting.nb"],
-ExpressionUUID->"32d8c779-652f-404d-a2ff-7c1ff71b87a0"
+ExpressionUUID->"33f49146-ed67-4ad4-a8f1-b92afcb164ac"
 ]
 (* End of Notebook Content *)
 
@@ -232,28 +214,24 @@ Notebook[{
 Cell[CellGroupData[{
 Cell[580, 22, 1002, 38, 158, "Title",ExpressionUUID->"7fd4ccc4-2df5-478f-aa96-ee55f77476ca"],
 Cell[CellGroupData[{
-Cell[1607, 64, 287, 6, 32, "ItemNumbered",ExpressionUUID->"712e1d6a-f622-4203-9fa2-a9286dc40b73"],
-Cell[1897, 72, 163, 2, 96, "ItemParagraph",ExpressionUUID->"85d200f1-8438-4632-a673-e4641d78a85f"]
+Cell[1607, 64, 372, 7, 32, "ItemNumbered",ExpressionUUID->"712e1d6a-f622-4203-9fa2-a9286dc40b73"],
+Cell[1982, 73, 163, 2, 96, "ItemParagraph",ExpressionUUID->"85d200f1-8438-4632-a673-e4641d78a85f"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[2097, 79, 709, 19, 32, "ItemNumbered",ExpressionUUID->"84993057-9b6e-4ada-a835-a5d1615866f9"],
-Cell[2809, 100, 163, 2, 96, "ItemParagraph",ExpressionUUID->"dc7efa03-1107-4575-bfe7-bcfc1f490a78"]
+Cell[2182, 80, 692, 18, 32, "ItemNumbered",ExpressionUUID->"84993057-9b6e-4ada-a835-a5d1615866f9"],
+Cell[2877, 100, 163, 2, 96, "ItemParagraph",ExpressionUUID->"dc7efa03-1107-4575-bfe7-bcfc1f490a78"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[3009, 107, 1084, 32, 49, "ItemNumbered",ExpressionUUID->"fcd87fe9-28e0-4d18-a173-6562315d00e3"],
-Cell[4096, 141, 163, 2, 96, "ItemParagraph",ExpressionUUID->"76b1f550-d4c4-4cc0-b863-e199e9207a92"]
+Cell[3077, 107, 1041, 30, 49, "ItemNumbered",ExpressionUUID->"fcd87fe9-28e0-4d18-a173-6562315d00e3"],
+Cell[4121, 139, 163, 2, 96, "ItemParagraph",ExpressionUUID->"76b1f550-d4c4-4cc0-b863-e199e9207a92"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[4296, 148, 713, 19, 37, "ItemNumbered",ExpressionUUID->"4093afb5-7c1a-48fb-859c-6593fc8b68b8"],
-Cell[5012, 169, 163, 2, 96, "ItemParagraph",ExpressionUUID->"2e606107-1ae5-43da-858e-858a685ac203"]
+Cell[4321, 146, 674, 18, 37, "ItemNumbered",ExpressionUUID->"4093afb5-7c1a-48fb-859c-6593fc8b68b8"],
+Cell[4998, 166, 163, 2, 96, "ItemParagraph",ExpressionUUID->"2e606107-1ae5-43da-858e-858a685ac203"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[5212, 176, 371, 7, 32, "ItemNumbered",ExpressionUUID->"402f86ed-f46f-47a2-a300-785e01a07dd4"],
-Cell[5586, 185, 163, 2, 96, "ItemParagraph",ExpressionUUID->"2aba2573-ec36-48bf-bf84-d0d4c0924fd7"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[5786, 192, 274, 6, 32, "ItemNumbered",ExpressionUUID->"b6fc3c8a-a5c6-4f0f-8bde-97e1624698fb"],
-Cell[6063, 200, 163, 2, 96, "ItemParagraph",ExpressionUUID->"5403fd82-403d-4e1c-922a-a62ba806745d"]
+Cell[5198, 173, 481, 9, 32, "ItemNumbered",ExpressionUUID->"402f86ed-f46f-47a2-a300-785e01a07dd4"],
+Cell[5682, 184, 163, 2, 96, "ItemParagraph",ExpressionUUID->"2aba2573-ec36-48bf-bf84-d0d4c0924fd7"]
 }, Open  ]]
 }, Open  ]]
 }
