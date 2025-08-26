@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    277860,       6182]
-NotebookOptionsPosition[    274164,       6115]
-NotebookOutlinePosition[    274610,       6132]
-CellTagsIndexPosition[    274567,       6129]
+NotebookDataLength[    279574,       6219]
+NotebookOptionsPosition[    275876,       6152]
+NotebookOutlinePosition[    276322,       6169]
+CellTagsIndexPosition[    276279,       6166]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -3742,8 +3742,9 @@ Cell[BoxData[
    3.9652062440056653`*^9}, {3.9652062817498627`*^9, 3.965206305700525*^9}, 
    3.9652063563850226`*^9, {3.965206418253149*^9, 3.965206418535718*^9}, {
    3.9652065349859724`*^9, 3.965206609199193*^9}, {3.965206840072875*^9, 
-   3.9652068873961473`*^9}},ExpressionUUID->"51c8f710-cc4a-42b9-97cc-\
-e784eecce97f"],
+   3.9652068873961473`*^9}},
+ CellLabel->
+  "In[155]:=",ExpressionUUID->"51c8f710-cc4a-42b9-97cc-e784eecce97f"],
 
 Cell[BoxData[
  TemplateBox[{
@@ -4221,7 +4222,7 @@ AIahjmg=
        Automatic, Automatic}}, Ticks -> {Automatic, Automatic}}], 
    FormBox[
     FormBox[
-     TemplateBox[{"\"der\"", "\"val\""}, "LineLegend", 
+     TemplateBox[{"\"der\"", "\"val\"", "\"max\""}, "LineLegend", 
       DisplayFunction -> (FormBox[
         StyleBox[
          StyleBox[
@@ -4277,7 +4278,31 @@ AIahjmg=
                     ImageSize -> {20, 12.5}, PlotRangePadding -> None, 
                     ImagePadding -> Automatic, 
                     BaselinePosition -> (Scaled[0.18000000000000002`] -> 
-                    Baseline)], #2}}, 
+                    Baseline)], #2}, {
+                   GraphicsBox[{{
+                    Directive[
+                    EdgeForm[
+                    Directive[
+                    Opacity[0.3], 
+                    GrayLevel[0]]], 
+                    PointSize[0.5], 
+                    Opacity[1.], 
+                    RGBColor[0.560181, 0.691569, 0.194885], 
+                    AbsoluteThickness[2]], {
+                    LineBox[{{0, 12.5}, {20, 12.5}}]}}, {
+                    Directive[
+                    EdgeForm[
+                    Directive[
+                    Opacity[0.3], 
+                    GrayLevel[0]]], 
+                    PointSize[0.5], 
+                    Opacity[1.], 
+                    RGBColor[0.560181, 0.691569, 0.194885], 
+                    AbsoluteThickness[2]], {}}}, AspectRatio -> Full, 
+                    ImageSize -> {20, 12.5}, PlotRangePadding -> None, 
+                    ImagePadding -> Automatic, 
+                    BaselinePosition -> (Scaled[0.18000000000000002`] -> 
+                    Baseline)], #3}}, 
                  GridBoxAlignment -> {
                   "Columns" -> {Center, Left}, "Rows" -> {{Baseline}}}, 
                  AutoDelete -> False, 
@@ -4315,10 +4340,18 @@ AIahjmg=
                    TemplateBox[<|
                     "color" -> RGBColor[0.880722, 0.611041, 0.142051]|>, 
                     "RGBColorSwatchTemplate"], ",", 
+                   RowBox[{"AbsoluteThickness", "[", "2", "]"}]}], "]"}], ",", 
+               RowBox[{"Directive", "[", 
+                 RowBox[{
+                   RowBox[{"Opacity", "[", "1.`", "]"}], ",", 
+                   
+                   TemplateBox[<|
+                    "color" -> RGBColor[0.560181, 0.691569, 0.194885]|>, 
+                    "RGBColorSwatchTemplate"], ",", 
                    RowBox[{"AbsoluteThickness", "[", "2", "]"}]}], "]"}]}], 
              "}"}], ",", 
            RowBox[{"{", 
-             RowBox[{#, ",", #2}], "}"}], ",", 
+             RowBox[{#, ",", #2, ",", #3}], "}"}], ",", 
            RowBox[{"LegendMarkers", "\[Rule]", "None"}], ",", 
            RowBox[{"LabelStyle", "\[Rule]", 
              RowBox[{"{", "}"}]}], ",", 
@@ -4344,8 +4377,9 @@ AIahjmg=
  CellChangeTimes->{
   3.9652062446180167`*^9, {3.9652062828152037`*^9, 3.9652063061927185`*^9}, 
    3.9652063570654936`*^9, {3.965206543051594*^9, 3.9652066099505563`*^9}, {
-   3.9652068533335247`*^9, 3.96520688041606*^9}},
- CellLabel->"Out[39]=",ExpressionUUID->"9006919d-a7e5-43ae-ab31-b377bee43216"]
+   3.9652068533335247`*^9, 3.96520688041606*^9}, 3.9652082917642746`*^9},
+ CellLabel->
+  "Out[155]=",ExpressionUUID->"0316365a-d6bd-402a-961b-499eb1279ab6"]
 }, Open  ]],
 
 Cell[TextData[{
@@ -6090,7 +6124,7 @@ Ad/JYSY=
        16.11809565095832, 
         FormBox[
          TemplateBox[{0, 0}, "Spacer2"], TraditionalForm], {0.005, 0.}}}}]]}},
-   1]], "Output",
+   2]], "Output",
  CellChangeTimes->{{3.9652067058864765`*^9, 3.9652067416640797`*^9}, 
    3.9652067975796986`*^9, {3.965206903960561*^9, 3.9652069336427937`*^9}, {
    3.9652069646209583`*^9, 3.96520704075705*^9}, {3.9652073855820136`*^9, 
@@ -6101,14 +6135,17 @@ Ad/JYSY=
 }, Open  ]],
 
 Cell["\<\
-Although each step is about 4 times as much work I can take ten times fewer \
-steps and get a better answer!  The fancier algorithm should take about 4/10 \
-the time.  \
+This looks like it is working OK.  Here are some questions. What would happen \
+to the step size if I made the error a relative error? Can we trust the \
+solver Mathematica is using? What solver is Mathematica using? Can we change \
+the solver Mathematica is using? Would we get the same answer in Julia, \
+matlab, Python, etc? \
 \>", "Text",
  CellChangeTimes->{{3.9651215425939736`*^9, 3.9651216427441053`*^9}, {
   3.9651217598083973`*^9, 3.9651217927597947`*^9}, {3.9651218991453004`*^9, 
-  3.9651219358032894`*^9}, {3.9651408922114496`*^9, 
-  3.9651410142036076`*^9}},ExpressionUUID->"e51fb566-6962-4aa0-b78a-\
+  3.9651219358032894`*^9}, {3.9651408922114496`*^9, 3.9651410142036076`*^9}, {
+  3.9652112321130657`*^9, 
+  3.9652114716621885`*^9}},ExpressionUUID->"e51fb566-6962-4aa0-b78a-\
 530cf89f138c"]
 }, Open  ]]
 }, Open  ]]
@@ -6171,17 +6208,17 @@ Cell[CellGroupData[{
 Cell[150827, 3415, 591, 13, 91, "Section",ExpressionUUID->"b41794be-7b96-4226-84d4-9c24a1ebb567"],
 Cell[151421, 3430, 8772, 278, 570, "Text",ExpressionUUID->"f0d803d7-ce97-44a6-b46d-c1327798f81f"],
 Cell[CellGroupData[{
-Cell[160218, 3712, 1340, 33, 110, "Input",ExpressionUUID->"51c8f710-cc4a-42b9-97cc-e784eecce97f"],
-Cell[161561, 3747, 29235, 600, 248, "Output",ExpressionUUID->"9006919d-a7e5-43ae-ab31-b377bee43216"]
+Cell[160218, 3712, 1366, 34, 110, "Input",ExpressionUUID->"51c8f710-cc4a-42b9-97cc-e784eecce97f"],
+Cell[161587, 3748, 30708, 633, 248, "Output",ExpressionUUID->"0316365a-d6bd-402a-961b-499eb1279ab6"]
 }, Open  ]],
-Cell[190811, 4350, 362, 11, 35, "Text",ExpressionUUID->"4e7da774-53f5-4c78-b040-8c1027c59236"],
-Cell[191176, 4363, 3822, 95, 277, "Input",ExpressionUUID->"bbc22ed3-9909-4367-abb7-15dec05f4ca3"],
-Cell[195001, 4460, 287, 7, 35, "Text",ExpressionUUID->"819860de-e5bb-4b00-ba56-414052e0e578"],
+Cell[192310, 4384, 362, 11, 35, "Text",ExpressionUUID->"4e7da774-53f5-4c78-b040-8c1027c59236"],
+Cell[192675, 4397, 3822, 95, 277, "Input",ExpressionUUID->"bbc22ed3-9909-4367-abb7-15dec05f4ca3"],
+Cell[196500, 4494, 287, 7, 35, "Text",ExpressionUUID->"819860de-e5bb-4b00-ba56-414052e0e578"],
 Cell[CellGroupData[{
-Cell[195313, 4471, 4528, 116, 336, "Input",ExpressionUUID->"8a5291b3-ac33-4532-8dc5-2c2b9ce0987d"],
-Cell[199844, 4589, 73799, 1510, 298, "Output",ExpressionUUID->"8379c842-0813-4d61-9cc0-210b2bebe0e8"]
+Cell[196812, 4505, 4528, 116, 336, "Input",ExpressionUUID->"8a5291b3-ac33-4532-8dc5-2c2b9ce0987d"],
+Cell[201343, 4623, 73799, 1510, 298, "Output",ExpressionUUID->"8379c842-0813-4d61-9cc0-210b2bebe0e8"]
 }, Open  ]],
-Cell[273658, 6102, 478, 9, 58, "Text",ExpressionUUID->"e51fb566-6962-4aa0-b78a-530cf89f138c"]
+Cell[275157, 6136, 691, 12, 104, "Text",ExpressionUUID->"e51fb566-6962-4aa0-b78a-530cf89f138c"]
 }, Open  ]]
 }, Open  ]]
 }
