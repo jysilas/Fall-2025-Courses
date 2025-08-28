@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    335953,       6333]
-NotebookOptionsPosition[    332183,       6267]
-NotebookOutlinePosition[    332630,       6284]
-CellTagsIndexPosition[    332587,       6281]
+NotebookDataLength[    335820,       6325]
+NotebookOptionsPosition[    332051,       6259]
+NotebookOutlinePosition[    332498,       6276]
+CellTagsIndexPosition[    332455,       6273]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -28,21 +28,18 @@ f1d81c252435"],
 Cell[TextData[{
  "A polynomial system of ",
  Cell[BoxData[
-  FormBox["n", TraditionalForm]],
-  FormatType->TraditionalForm,ExpressionUUID->
+  FormBox["n", TraditionalForm]],ExpressionUUID->
   "5578ec00-f9b3-4d1e-8a39-1cbde5001360"],
  " polynomials in ",
  Cell[BoxData[
-  FormBox["n", TraditionalForm]],
-  FormatType->TraditionalForm,ExpressionUUID->
+  FormBox["n", TraditionalForm]],ExpressionUUID->
   "b180735f-36e1-4f0a-b37a-1e59a2589cc2"],
  " variables like\n\t",
  Cell[BoxData[
   FormBox[
    RowBox[{
     RowBox[{"p", "(", "z", ")"}], "=", "0"}], TraditionalForm]],
-  FormatType->TraditionalForm,ExpressionUUID->
-  "802b8a10-8e13-452e-9707-12182dda5fd2"],
+  ExpressionUUID->"802b8a10-8e13-452e-9707-12182dda5fd2"],
  "\nwhere ",
  Cell[BoxData[
   FormBox[
@@ -51,8 +48,7 @@ Cell[TextData[{
      SubscriptBox["p", "1"], ":", 
      SuperscriptBox["\[DoubleStruckCapitalC]", "n"]}], "\[Rule]", 
     SuperscriptBox["\[DoubleStruckCapitalC]", "n"]}], TraditionalForm]],
-  FormatType->TraditionalForm,ExpressionUUID->
-  "55d77ca4-e2a4-49f7-a440-75240bb29a74"],
+  ExpressionUUID->"55d77ca4-e2a4-49f7-a440-75240bb29a74"],
  " can have lots of solutions.  Some polynomial systems e.g.\n\t",
  Cell[BoxData[
   FormBox[
@@ -65,8 +61,7 @@ Cell[TextData[{
       SubscriptBox["r", "2"]], "=", "1"}], ",", "\[Ellipsis]", ",", 
     RowBox[{
      SubsuperscriptBox["z", "n", 
-      SubscriptBox["r", "n"]], "=", "1"}]}], TraditionalForm]],
-  FormatType->TraditionalForm,ExpressionUUID->
+      SubscriptBox["r", "n"]], "=", "1"}]}], TraditionalForm]],ExpressionUUID->
   "8250b485-1d44-42a4-944d-acbe6c7c9fde"],
  " \nhave easily computed analytical solutions  \n\t",
  Cell[BoxData[
@@ -84,16 +79,14 @@ Cell[TextData[{
        RowBox[{"2", "\[Pi]", " ", 
         RowBox[{"k", "/", 
          SubscriptBox["n", "i"]}]}], ")"}]}]}]}], TraditionalForm]],
-  FormatType->TraditionalForm,ExpressionUUID->
-  "d77b9439-34a9-4e89-886a-b94d26060a6c"],
+  ExpressionUUID->"d77b9439-34a9-4e89-886a-b94d26060a6c"],
  "  for ",
  Cell[BoxData[
   FormBox[
    RowBox[{
     RowBox[{"k", "=", "0"}], ",", "1", ",", "2", ",", "\[Ellipsis]", ",", 
     RowBox[{
-     SubscriptBox["r", "i"], "-", "1"}]}], TraditionalForm]],
-  FormatType->TraditionalForm,ExpressionUUID->
+     SubscriptBox["r", "i"], "-", "1"}]}], TraditionalForm]],ExpressionUUID->
   "d014f51c-3695-43ca-916c-2a900b2ee776"],
  "\nfor a potentially huge total of \n\t",
  Cell[BoxData[
@@ -102,14 +95,12 @@ Cell[TextData[{
     RowBox[{
      SubsuperscriptBox["\[Product]", 
       RowBox[{"i", "=", "1"}], "n"], 
-     SubscriptBox["r", "i"]}]}], TraditionalForm]],
-  FormatType->TraditionalForm,ExpressionUUID->
+     SubscriptBox["r", "i"]}]}], TraditionalForm]],ExpressionUUID->
   "e52409ea-49ff-4646-b61c-d35bd7b9f637"],
  " \ndistinct solutions. Although analytical techniques provide a lot of \
 information (including a way to compute ",
  Cell[BoxData[
-  FormBox["m", TraditionalForm]],
-  FormatType->TraditionalForm,ExpressionUUID->
+  FormBox["m", TraditionalForm]],ExpressionUUID->
   "7a05b623-29df-4211-9de4-6cf1a66e15ab"],
  ") they do not provide practical solution techniques for large systems of \
 interest. \n\nPolynomial homotopy (using a homotopy to connect a polynomial \
@@ -5601,13 +5592,13 @@ Cell["Ramification Points.", "Section",
 2db69c94bf6b"],
 
 Cell["\<\
-A system of two polynomials in two unknowns should have four solutions. \
-Multiple solutions are ramified and points with multiple solutions are \
-ramification points.  A simple example probably make this clearer. \
+A system of two quadratics in two unknowns should have four solutions. \
+Multiple solutions are called ramified and points with multiple solutions are \
+called ramification points.  A simple example probably make this clearer. \
 \>", "Text",
  CellChangeTimes->{{3.9650365700943756`*^9, 3.965036731884048*^9}, {
-  3.9650370117118797`*^9, 
-  3.9650370595835805`*^9}},ExpressionUUID->"e57fc7bc-7f72-4567-b503-\
+  3.9650370117118797`*^9, 3.9650370595835805`*^9}, {3.9653769706369524`*^9, 
+  3.9653770083533163`*^9}},ExpressionUUID->"e57fc7bc-7f72-4567-b503-\
 371e37e4cde7"],
 
 Cell[CellGroupData[{
@@ -5905,8 +5896,8 @@ Cell[BoxData[
 
 Cell[TextData[{
  "Systems have fewer discrete solutions than expected at ramification points \
-and where the highest powers in the polynomials cancel. Paths intersect at \
-ramifications so the ODE \n\t",
+(where parameterized curves cross) and when highest powers in the polynomials \
+cancel. Paths intersect at ramifications so the ODE \n\t",
  Cell[BoxData[
   FormBox[
    RowBox[{
@@ -5951,7 +5942,8 @@ polynomial order drops.  "
    3.9650351844137144`*^9}, 3.965036492911394*^9, {3.9651154552686253`*^9, 
    3.9651155434355745`*^9}, {3.965115595003488*^9, 3.965115603620208*^9}, {
    3.965116265645915*^9, 3.9651162659544954`*^9}, {3.96511668761425*^9, 
-   3.9651167262765017`*^9}},ExpressionUUID->"4cab4539-bbb9-4552-a718-\
+   3.9651167262765017`*^9}, {3.9653770231014175`*^9, 
+   3.9653770715298853`*^9}},ExpressionUUID->"4cab4539-bbb9-4552-a718-\
 ae767f01e5b8"],
 
 Cell[TextData[{
@@ -6285,54 +6277,54 @@ CellTagsIndex->{}
 Notebook[{
 Cell[CellGroupData[{
 Cell[580, 22, 187, 3, 98, "Title",ExpressionUUID->"f2f44f3d-e8ae-40dd-8c67-f1d81c252435"],
-Cell[770, 27, 4014, 102, 426, "Text",ExpressionUUID->"7b0b347b-aa41-46bb-a10e-c38594a90560"],
+Cell[770, 27, 3735, 93, 426, "Text",ExpressionUUID->"7b0b347b-aa41-46bb-a10e-c38594a90560"],
 Cell[CellGroupData[{
-Cell[4809, 133, 256, 4, 67, "Section",ExpressionUUID->"949c65e7-ff1f-488f-b371-1994a3782ba3"],
-Cell[5068, 139, 5234, 152, 288, "Text",ExpressionUUID->"44935321-6ff5-4b05-b6fc-b9a979f4ae9b"],
+Cell[4530, 124, 256, 4, 67, "Section",ExpressionUUID->"949c65e7-ff1f-488f-b371-1994a3782ba3"],
+Cell[4789, 130, 5234, 152, 288, "Text",ExpressionUUID->"44935321-6ff5-4b05-b6fc-b9a979f4ae9b"],
 Cell[CellGroupData[{
-Cell[10327, 295, 6102, 173, 319, "Input",ExpressionUUID->"90c2053a-1cd8-47bc-87c2-d119e5f173dd"],
-Cell[16432, 470, 6801, 172, 155, "Output",ExpressionUUID->"5790908f-9338-4ea3-b0a9-ef069b1a2728"]
+Cell[10048, 286, 6102, 173, 319, "Input",ExpressionUUID->"90c2053a-1cd8-47bc-87c2-d119e5f173dd"],
+Cell[16153, 461, 6801, 172, 155, "Output",ExpressionUUID->"5790908f-9338-4ea3-b0a9-ef069b1a2728"]
 }, Open  ]],
-Cell[23248, 645, 475, 12, 35, "Text",ExpressionUUID->"c4c68ea6-a8eb-47c6-bf87-397a9ce3831a"],
+Cell[22969, 636, 475, 12, 35, "Text",ExpressionUUID->"c4c68ea6-a8eb-47c6-bf87-397a9ce3831a"],
 Cell[CellGroupData[{
-Cell[23748, 661, 1748, 45, 86, "Input",ExpressionUUID->"eb8f2414-3138-49bc-951f-f3257326fb08"],
-Cell[25499, 708, 279130, 4881, 499, "Output",ExpressionUUID->"da59128c-cbb9-40eb-bf68-b078c2abf878"]
+Cell[23469, 652, 1748, 45, 86, "Input",ExpressionUUID->"eb8f2414-3138-49bc-951f-f3257326fb08"],
+Cell[25220, 699, 279130, 4881, 499, "Output",ExpressionUUID->"da59128c-cbb9-40eb-bf68-b078c2abf878"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[304678, 5595, 344, 5, 67, "Section",ExpressionUUID->"4c25ed3f-fa6d-4512-b6cb-2db69c94bf6b"],
-Cell[305025, 5602, 419, 8, 58, "Text",ExpressionUUID->"e57fc7bc-7f72-4567-b503-371e37e4cde7"],
+Cell[304399, 5586, 344, 5, 67, "Section",ExpressionUUID->"4c25ed3f-fa6d-4512-b6cb-2db69c94bf6b"],
+Cell[304746, 5593, 482, 8, 58, "Text",ExpressionUUID->"e57fc7bc-7f72-4567-b503-371e37e4cde7"],
 Cell[CellGroupData[{
-Cell[305469, 5614, 4064, 115, 184, "Input",ExpressionUUID->"04bc6a0a-ceab-4809-b86c-69b7c26f26f1"],
-Cell[309536, 5731, 554, 9, 22, "Print",ExpressionUUID->"eaa11549-fb78-4841-9661-56fd91a3d6c1"],
-Cell[310093, 5742, 4520, 99, 247, "Output",ExpressionUUID->"bcaefe58-17eb-4a57-ad89-e6b2ce06c012"],
-Cell[314616, 5843, 678, 13, 22, "Print",ExpressionUUID->"0d62f833-e43f-40bd-8abb-83064c4bfe35"],
-Cell[315297, 5858, 1746, 44, 159, "Output",ExpressionUUID->"5fd546a2-cec5-480e-b39f-210776b95ce8"]
+Cell[305253, 5605, 4064, 115, 184, "Input",ExpressionUUID->"04bc6a0a-ceab-4809-b86c-69b7c26f26f1"],
+Cell[309320, 5722, 554, 9, 22, "Print",ExpressionUUID->"eaa11549-fb78-4841-9661-56fd91a3d6c1"],
+Cell[309877, 5733, 4520, 99, 247, "Output",ExpressionUUID->"bcaefe58-17eb-4a57-ad89-e6b2ce06c012"],
+Cell[314400, 5834, 678, 13, 22, "Print",ExpressionUUID->"0d62f833-e43f-40bd-8abb-83064c4bfe35"],
+Cell[315081, 5849, 1746, 44, 112, "Output",ExpressionUUID->"5fd546a2-cec5-480e-b39f-210776b95ce8"]
 }, Open  ]],
-Cell[317058, 5905, 2341, 49, 150, "Text",ExpressionUUID->"4cab4539-bbb9-4552-a718-ae767f01e5b8"],
-Cell[319402, 5956, 2033, 42, 127, "Text",ExpressionUUID->"ba46b818-0c47-44ab-b14e-4ef57b57d116"],
-Cell[321438, 6000, 1235, 24, 86, "Text",ExpressionUUID->"086a7314-0674-4678-a27e-6baa3e96a701"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[322710, 6029, 394, 6, 67, "Section",ExpressionUUID->"86194be3-33cc-4841-bdb6-e5f8049cd7d1"],
-Cell[323107, 6037, 3167, 85, 196, "Text",ExpressionUUID->"1fec565d-5485-42db-9027-fb4015148c93"]
+Cell[316842, 5896, 2425, 50, 150, "Text",ExpressionUUID->"4cab4539-bbb9-4552-a718-ae767f01e5b8"],
+Cell[319270, 5948, 2033, 42, 127, "Text",ExpressionUUID->"ba46b818-0c47-44ab-b14e-4ef57b57d116"],
+Cell[321306, 5992, 1235, 24, 86, "Text",ExpressionUUID->"086a7314-0674-4678-a27e-6baa3e96a701"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[326311, 6127, 436, 6, 67, "Section",ExpressionUUID->"f0c2f5a4-116a-418e-9e55-4e68cc27c200"],
-Cell[326750, 6135, 1174, 18, 81, "Text",ExpressionUUID->"6a6426b1-3161-4161-8c88-245527c70f24"],
+Cell[322578, 6021, 394, 6, 67, "Section",ExpressionUUID->"86194be3-33cc-4841-bdb6-e5f8049cd7d1"],
+Cell[322975, 6029, 3167, 85, 196, "Text",ExpressionUUID->"1fec565d-5485-42db-9027-fb4015148c93"]
+}, Open  ]],
 Cell[CellGroupData[{
-Cell[327949, 6157, 1167, 29, 124, "Input",ExpressionUUID->"6c3ab237-a4db-41ee-9b3a-c51cb024ae0a"],
-Cell[329119, 6188, 415, 8, 32, "Output",ExpressionUUID->"ae4db28e-4a32-41bd-afa7-2a3297ae01b2"],
-Cell[329537, 6198, 416, 8, 32, "Output",ExpressionUUID->"cbb17283-08af-4b7d-890a-420ed30b070c"]
+Cell[326179, 6119, 436, 6, 67, "Section",ExpressionUUID->"f0c2f5a4-116a-418e-9e55-4e68cc27c200"],
+Cell[326618, 6127, 1174, 18, 81, "Text",ExpressionUUID->"6a6426b1-3161-4161-8c88-245527c70f24"],
+Cell[CellGroupData[{
+Cell[327817, 6149, 1167, 29, 124, "Input",ExpressionUUID->"6c3ab237-a4db-41ee-9b3a-c51cb024ae0a"],
+Cell[328987, 6180, 415, 8, 32, "Output",ExpressionUUID->"ae4db28e-4a32-41bd-afa7-2a3297ae01b2"],
+Cell[329405, 6190, 416, 8, 32, "Output",ExpressionUUID->"cbb17283-08af-4b7d-890a-420ed30b070c"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[330002, 6212, 341, 5, 67, "Section",ExpressionUUID->"9f529ef8-a812-4fb3-a832-bd6eaf7ebe8a"],
-Cell[330346, 6219, 574, 10, 81, "Text",ExpressionUUID->"27239c65-cf29-45b3-ba63-459f37abf003"],
-Cell[330923, 6231, 265, 6, 32, "ItemNumbered",ExpressionUUID->"6a60e0bb-faa6-46b9-8836-0b8c5c8b32c2"],
-Cell[331191, 6239, 285, 6, 32, "ItemNumbered",ExpressionUUID->"b47852c3-11b4-48ca-bcb4-7d04db273612"],
-Cell[331479, 6247, 347, 7, 32, "ItemNumbered",ExpressionUUID->"8878eedd-e2da-4587-8435-ea9c9edebbf6"],
-Cell[331829, 6256, 326, 7, 32, "ItemNumbered",ExpressionUUID->"4cab0cc0-617f-43cf-bc5b-a9a25f953313"]
+Cell[329870, 6204, 341, 5, 67, "Section",ExpressionUUID->"9f529ef8-a812-4fb3-a832-bd6eaf7ebe8a"],
+Cell[330214, 6211, 574, 10, 81, "Text",ExpressionUUID->"27239c65-cf29-45b3-ba63-459f37abf003"],
+Cell[330791, 6223, 265, 6, 32, "ItemNumbered",ExpressionUUID->"6a60e0bb-faa6-46b9-8836-0b8c5c8b32c2"],
+Cell[331059, 6231, 285, 6, 32, "ItemNumbered",ExpressionUUID->"b47852c3-11b4-48ca-bcb4-7d04db273612"],
+Cell[331347, 6239, 347, 7, 32, "ItemNumbered",ExpressionUUID->"8878eedd-e2da-4587-8435-ea9c9edebbf6"],
+Cell[331697, 6248, 326, 7, 32, "ItemNumbered",ExpressionUUID->"4cab0cc0-617f-43cf-bc5b-a9a25f953313"]
 }, Open  ]]
 }, Open  ]]
 }
