@@ -1,0 +1,497 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     16560,        489]
+NotebookOptionsPosition[     15410,        463]
+NotebookOutlinePosition[     15884,        481]
+CellTagsIndexPosition[     15841,        478]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["\<\
+Simplified ODE 
+Existence and Uniqueness\
+\>", "Title",
+ CellChangeTimes->{{3.965392465723527*^9, 
+  3.9653924802186995`*^9}},ExpressionUUID->"27c83743-5710-432a-83e3-\
+23cfcfc17a81"],
+
+Cell[TextData[{
+ "Definition\nAutonomous IVP: ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"y", "'"}], "=", 
+    RowBox[{"f", "(", "y", ")"}]}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "5dcca4e1-7b86-47cc-bd22-57a7684171fd"],
+ " with ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"y", "(", "0", ")"}], "=", 
+    SubscriptBox["y", "0"]}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "496c9e81-9026-41ce-96d4-d4b9fafd9052"],
+ ".  \nNotes:\nCommonly ODEs are on ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["\[DoubleStruckCapitalR]", "n"], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "20815d88-8387-4c3d-a16e-2842ee4ad915"],
+ " (",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"f", ":", 
+     SuperscriptBox["\[DoubleStruckCapitalR]", "n"]}], "\[Rule]", 
+    SuperscriptBox["\[DoubleStruckCapitalR]", "n"]}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "58de5da9-be82-4c17-ab49-4dfff4b890e8"],
+ " and ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["y", "0"], "\[Element]", 
+    SuperscriptBox["\[DoubleStruckCapitalR]", "n"], " "}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "2dd85f0a-f192-4a1e-bb34-399c67b31921"],
+ ") but ODEs are useful on other spaces. \nThe rest of this notebook is about \
+the ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["\[DoubleStruckCapitalR]", "n"], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "047063e1-5f2d-40b6-bb62-9fe89aa57623"],
+ " case.  "
+}], "Text",
+ CellChangeTimes->{{3.9653924842014256`*^9, 3.9653925668547173`*^9}, {
+  3.9653957120046835`*^9, 3.9653959401501617`*^9}, {3.965395983868969*^9, 
+  3.9653960128887863`*^9}, {3.9653960705889626`*^9, 3.965396133341485*^9}, {
+  3.9653964397100563`*^9, 3.9653964416365767`*^9}, {3.9653968187833586`*^9, 
+  3.96539682738353*^9}},ExpressionUUID->"c81bbbf4-23ba-4203-8f2a-\
+f6f48048e28e"],
+
+Cell[TextData[{
+ "Definition\nSolution: A differentiable function ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"y", ":", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"-", "\[Delta]"}], ",", "\[Delta]"}], ")"}]}], "\[Rule]", 
+    SuperscriptBox["\[DoubleStruckCapitalR]", "n"]}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "5e8c6053-90f9-44b0-9be2-a9933e680838"],
+ " is a local solution of the IVP if it satisfies the Initial Condition ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"y", "(", "0", ")"}], "=", 
+    SubscriptBox["y", "0"]}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "c13d7a24-4660-45f8-be2b-13da11f7fc08"],
+ " and ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     RowBox[{"y", "'"}], 
+     RowBox[{"(", "t", ")"}]}], "=", 
+    RowBox[{"f", "(", 
+     RowBox[{"y", "(", "t", ")"}], ")"}]}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "82d9481f-a1a8-4130-8126-415499513dfe"],
+ " for ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"t", "\[Element]", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"-", "\[Delta]"}], ",", "\[Delta]"}], ")"}]}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "cfea1f19-ea8f-48ad-b9e3-959d4da8f033"],
+ ".  \nNotes: Clearly ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"\[Delta]", ">", "0"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "744efde6-e479-4d16-b71a-7052649dbcab"],
+ ".  The short hand for the second condition is \[OpenCurlyDoubleQuote]y \
+satisfies the ODE.\[CloseCurlyDoubleQuote] Locally means that we do not care \
+if ",
+ Cell[BoxData[
+  FormBox["\[Delta]", TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "dae6af75-948d-4412-a030-f0a6ccf06216"],
+ " is small just that it is non-zero.   "
+}], "Text",
+ CellChangeTimes->{{3.9653924842014256`*^9, 3.9653925668547173`*^9}, {
+  3.9653957120046835`*^9, 3.9653959401501617`*^9}, {3.965395983868969*^9, 
+  3.9653960128887863`*^9}, {3.965396057775425*^9, 3.965396059024108*^9}, {
+  3.9653961391900415`*^9, 3.965396230633026*^9}, {3.9653963138292303`*^9, 
+  3.965396548437854*^9}, {3.965396829822631*^9, 
+  3.9653968328848314`*^9}},ExpressionUUID->"30eb49b3-21e1-4519-9298-\
+b4a21672d46b"],
+
+Cell[TextData[{
+ "Theorem (Existence)\nIf ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"f", ":", 
+     SuperscriptBox["\[DoubleStruckCapitalR]", "n"]}], "\[Rule]", 
+    SuperscriptBox["\[DoubleStruckCapitalR]", "n"]}], TraditionalForm]],
+  ExpressionUUID->"78659f6d-4cfe-4700-b5e2-27ebd1a7c454"],
+ " is Lipschitz Continuous then the IVP ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"y", "'"}], "=", 
+    RowBox[{"f", "(", "y", ")"}]}], TraditionalForm]],ExpressionUUID->
+  "b8f11e62-df06-44fd-bd2a-09ef59400191"],
+ " with ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"y", "(", "0", ")"}], "=", 
+    SubscriptBox["y", "0"]}], TraditionalForm]],ExpressionUUID->
+  "aad83f7d-185b-4df8-90e6-b69332b43b6d"],
+ " has a local solution.  \nProof Plan\nA) Define ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     SubscriptBox["x", 
+      RowBox[{"n", "+", "1"}]], "(", "t", ")"}], "=", 
+    RowBox[{
+     SubscriptBox["y", "0"], "+", 
+     RowBox[{
+      SubsuperscriptBox["\[Integral]", "0", "t"], 
+      RowBox[{
+       RowBox[{"f", "(", 
+        RowBox[{
+         SubscriptBox["x", "n"], "(", "\[Tau]", ")"}], ")"}], 
+       "d\[Tau]"}]}]}]}], TraditionalForm]],ExpressionUUID->
+  "db4ab30a-7a42-4cd4-ab24-8c6d72334442"],
+ "  with ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     SubscriptBox["x", "0"], "(", "t", ")"}], "=", 
+    SubscriptBox["y", "0"]}], TraditionalForm]],ExpressionUUID->
+  "ee4d7534-371a-494e-a8c7-ebd241335d87"],
+ ".\nB) Explain why ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["x", "n"], "(", "t", ")"}], TraditionalForm]],ExpressionUUID->
+  "5564ba25-289f-42b0-9629-90e42f4c98d0"],
+ " is well defined and differentiable.\nC) Explain that if ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     SubscriptBox["x", "n"], "(", "t", ")"}], "\[Rule]", 
+    RowBox[{
+     SubscriptBox["x", "\[Infinity]"], "(", "t", ")"}]}], TraditionalForm]],
+  ExpressionUUID->"0748d6d3-cf2d-4255-b7f1-65da7a00b3e6"],
+ "  for ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"t", "\[Element]", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"-", "\[Delta]"}], ",", "\[Delta]"}], ")"}]}], 
+   TraditionalForm]],ExpressionUUID->"8e46a65c-5fea-4596-8e92-af82d24b2d49"],
+ " with ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"\[Delta]", ">", "0"}], TraditionalForm]],ExpressionUUID->
+  "22077738-4bf3-41c8-99ef-c10144ff98e7"],
+ " then we have a solution of the IVP.\nD) Estimate ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"\[Delta]", ">", "0"}], TraditionalForm]],ExpressionUUID->
+  "a7388f47-839c-401c-99b8-8ce03ebb73aa"],
+ " and establish that ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["x", "n"], "(", "t", ")"}], TraditionalForm]],ExpressionUUID->
+  "606a2a5e-5e7f-4355-8a43-4c310272a4b0"],
+ " converges on ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"-", "\[Delta]"}], ",", "\[Delta]"}], ")"}], TraditionalForm]],
+  ExpressionUUID->"5c82b9fc-9422-49e0-8eb2-72f1a75ef0de"],
+ ".\nE) Assemble the pieces.  "
+}], "Text",
+ CellChangeTimes->{{3.9653924842014256`*^9, 3.9653925668547173`*^9}, {
+   3.9653957120046835`*^9, 3.965395978997878*^9}, {3.9653960196700697`*^9, 
+   3.9653960422538056`*^9}, {3.9653965915642967`*^9, 
+   3.9653968138320804`*^9}, {3.9653970519525423`*^9, 
+   3.9653970887772083`*^9}, {3.9653980651428275`*^9, 3.965398067827278*^9}, 
+   3.9653981898798532`*^9, {3.9653991406562295`*^9, 3.965399195488353*^9}, {
+   3.9654014176153765`*^9, 
+   3.9654014365089836`*^9}},ExpressionUUID->"d1bb8d04-71d0-48da-84d2-\
+698a749b08a4"],
+
+Cell[TextData[Cell[BoxData[
+ FormBox[
+  RowBox[{
+   RowBox[{"|", 
+    RowBox[{
+     RowBox[{
+      SubscriptBox["x", "n"], "(", "t", ")"}], "-", 
+     RowBox[{
+      SubscriptBox["x", "m"], "(", "t", ")"}]}], "|"}], "=", 
+   RowBox[{"|", 
+    RowBox[{
+     RowBox[{
+      SubsuperscriptBox["\[Integral]", "0", "t"], 
+      RowBox[{"f", "(", 
+       RowBox[{
+        SubscriptBox["x", "n"], "(", "\[Tau]", ")"}], ")"}]}], "-", 
+     RowBox[{
+      RowBox[{"f", "(", 
+       RowBox[{
+        SubscriptBox["x", "m"], "(", "\[Tau]", ")"}], ")"}], "d\[Tau]"}]}], 
+    "|", 
+    RowBox[{"\[LessEqual]", 
+     SubsuperscriptBox["\[Integral]", "0", "t"]}], "|", 
+    RowBox[{
+     RowBox[{"f", "(", 
+      RowBox[{
+       SubscriptBox["x", "n"], "(", "\[Tau]", ")"}], ")"}], "-", 
+     RowBox[{"f", "(", 
+      RowBox[{
+       SubscriptBox["x", "m"], "(", "\[Tau]", ")"}], ")"}]}], "|", 
+    RowBox[{"d\[Tau]", "\[LessEqual]", 
+     RowBox[{"L", 
+      SubsuperscriptBox["\[Integral]", "0", "t"]}]}], "|", 
+    RowBox[{
+     RowBox[{
+      SubscriptBox["x", "n"], "(", "\[Tau]", ")"}], "-", 
+     RowBox[{
+      SubscriptBox["x", "m"], "(", "\[Tau]", ")"}]}], "|"}]}], 
+  TraditionalForm]],
+ FormatType->
+  TraditionalForm,ExpressionUUID->"53e7fd0f-abf1-4c88-8f35-7eaddce7a789"]], \
+"Text",
+ CellChangeTimes->{{3.965399095012401*^9, 3.9653991234347067`*^9}, {
+  3.965399202261839*^9, 3.965399302161786*^9}, {3.965401726971875*^9, 
+  3.965401726971875*^9}},ExpressionUUID->"4809af48-a56f-4f7b-89c0-\
+bdfc3dd20253"],
+
+Cell[TextData[{
+ "B) Clearly ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     SubscriptBox["x", "0"], "(", "t", ")"}], "=", 
+    SubscriptBox["y", "0"]}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "022380a3-e32d-46d5-aa16-bb30dbafa497"],
+ " is well defined for all t and is differentiable. \nAssume ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["x", "n"], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "66cd72e2-9ea3-462a-8b0e-0a45ed2bc7ec"],
+ " is well defined and differentiable on \[DoubleStruckCapitalR]. then ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"f", "(", 
+    RowBox[{"x", "(", "t", ")"}], ")"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "67c479ed-4d19-4eff-9f31-29e6ad080cfb"],
+ " is well defined and continuous on \[DoubleStruckCapitalR] and \n\t",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubsuperscriptBox["\[Integral]", "0", "t"], 
+    RowBox[{
+     RowBox[{"f", "(", 
+      RowBox[{
+       SubscriptBox["x", "n"], "(", "\[Tau]", ")"}], ")"}], "d\[Tau]"}]}], 
+   TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "c908055d-c9c3-4cdc-9526-6926f8938c64"],
+ " \nis well defined etc. "
+}], "Text",
+ CellChangeTimes->{{3.9653986441823807`*^9, 
+  3.9653989791936197`*^9}},ExpressionUUID->"8262b4ec-ac87-4c73-ac11-\
+daee910f1ef4"],
+
+Cell[TextData[{
+ "Definition\nA function ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"f", ":", 
+     SuperscriptBox["\[DoubleStruckCapitalR]", "n"]}], "\[Rule]", 
+    SuperscriptBox["\[DoubleStruckCapitalR]", "n"]}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "4160a91a-8a3f-4a24-a3f4-3a117ead9520"],
+ " is Lipschitz with constant ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"L", "<", "\[Infinity]"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "175c79a2-aa6c-415c-8f83-e90eee26ade2"],
+ " if\n\t",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"|", 
+    RowBox[{
+     RowBox[{"f", "(", "u", ")"}], "-", 
+     RowBox[{"f", "(", "v", ")"}]}], "|", 
+    RowBox[{"<", "L"}], " ", "|", 
+    RowBox[{"u", "-", "v"}], "|"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "2becce18-5ebc-4a96-935d-6b99883a2650"],
+ "  \nNotes: Lipschitz continuity is between continuous and continuously \
+differentiable; Lipschitz continuity has local versions.  "
+}], "Text",
+ InitializationCell->True,
+ CellChangeTimes->{{3.9653975373259697`*^9, 3.9653977226575537`*^9}, 
+   3.9653977638146296`*^9, {3.965397820766838*^9, 3.965397976999419*^9}, {
+   3.965401447925619*^9, 
+   3.965401592458082*^9}},ExpressionUUID->"d9b7189d-9ae3-4475-841a-\
+e690eb201bfc"],
+
+Cell[TextData[{
+ "Theorem (Uniqueness)\nIf ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["y", "1"], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "9d3f8139-ed22-4c3b-9f53-fa8dc140d761"],
+ " and ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["y", "2"], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "4562aa3b-dbf2-4edf-8830-9fa75be2a957"],
+ " are local solutions defined on the same interval ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"-", "\[Delta]"}], ",", "\[Delta]"}], ")"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "62a0d453-4609-4377-b69d-3d5c72104167"],
+ " of the IVP with ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"f", ":", 
+     SuperscriptBox["\[DoubleStruckCapitalR]", "n"]}], "\[Rule]", 
+    SuperscriptBox["\[DoubleStruckCapitalR]", "n"]}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "943a9fa1-f856-4905-8e50-dbd5fc302902"],
+ " Lipschitz then ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     SubscriptBox["y", "1"], "(", "t", ")"}], "=", 
+    RowBox[{
+     SubscriptBox["y", "2"], "(", "t", ")"}]}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "e4af4f32-88c2-4bf6-b750-ed5698927b23"],
+ " for ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"t", "\[Element]", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"-", "\[Delta]"}], ",", "\[Delta]"}], ")"}]}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "0b52a5a4-b40b-4b52-b30b-b21bc1039c24"],
+ ". \nProof Plan\nA) Show that the difference ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"x", "(", "t", ")"}], "=", 
+    RowBox[{
+     RowBox[{
+      SubscriptBox["y", "1"], "(", "t", ")"}], "-", 
+     RowBox[{
+      SubscriptBox["y", "2"], "(", "t", ")"}]}]}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "07f9008b-0e73-4d08-9f7e-7f58a3ee2716"],
+ " is identically zero for ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"\[Element]", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"-", "\[Delta]"}], ",", "\[Delta]"}], ")"}]}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "3c617813-14e7-4cd4-af3b-2b86bd51a6fa"],
+ ". "
+}], "Text",
+ CellChangeTimes->{{3.9653924842014256`*^9, 3.9653925668547173`*^9}, {
+   3.9653957120046835`*^9, 3.965395978997878*^9}, {3.9653960196700697`*^9, 
+   3.9653960422538056`*^9}, {3.9653965915642967`*^9, 
+   3.9653968138320804`*^9}, {3.9653970519525423`*^9, 
+   3.9653970887772083`*^9}, {3.9653980651428275`*^9, 3.965398180257141*^9}, {
+   3.965398383535162*^9, 3.965398450353238*^9}, 3.965401599965317*^9, {
+   3.9654016304019766`*^9, 
+   3.9654016837573175`*^9}},ExpressionUUID->"15648313-23d1-4d53-b0e3-\
+620c25207219"]
+}, Open  ]]
+},
+WindowSize->{1134.5, 566.5},
+WindowMargins->{{Automatic, -1500.5}, {Automatic, -232.5}},
+TaggingRules-><|"TryRealOnly" -> False|>,
+Magnification->1.5,
+FrontEndVersion->"13.3 for Microsoft Windows (64-bit) (July 24, 2023)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"054a74dd-7ede-4d0c-be66-d5c1d73440f4"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 193, 6, 238, "Title",ExpressionUUID->"27c83743-5710-432a-83e3-23cfcfc17a81"],
+Cell[776, 30, 1950, 54, 190, "Text",ExpressionUUID->"c81bbbf4-23ba-4203-8f2a-f6f48048e28e"],
+Cell[2729, 86, 2247, 61, 190, "Text",ExpressionUUID->"30eb49b3-21e1-4519-9298-b4a21672d46b"],
+Cell[4979, 149, 3522, 104, 297, "Text",ExpressionUUID->"d1bb8d04-71d0-48da-84d2-698a749b08a4"],
+Cell[8504, 255, 1505, 45, 55, "Text",ExpressionUUID->"4809af48-a56f-4f7b-89c0-bdfc3dd20253"],
+Cell[10012, 302, 1340, 39, 159, "Text",ExpressionUUID->"8262b4ec-ac87-4c73-ac11-daee910f1ef4"],
+Cell[11355, 343, 1301, 35, 190, "Text",ExpressionUUID->"d9b7189d-9ae3-4475-841a-e690eb201bfc",
+ InitializationCell->True],
+Cell[12659, 380, 2735, 80, 190, "Text",ExpressionUUID->"15648313-23d1-4d53-b0e3-620c25207219"]
+}, Open  ]]
+}
+]
+*)
+
