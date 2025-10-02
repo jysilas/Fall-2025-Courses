@@ -1,0 +1,186 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      6349,        178]
+NotebookOptionsPosition[      4967,        144]
+NotebookOutlinePosition[      5788,        169]
+CellTagsIndexPosition[      5745,        166]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox[
+   FrameBox[GridBox[{
+      {
+       StyleBox["Name",
+        FontSize->18], 
+       StyleBox["                                             ",
+        FontSize->18]},
+      {
+       StyleBox[" ",
+        FontSize->18], 
+       StyleBox[" ",
+        FontSize->18]}
+     }]], TraditionalForm]],ExpressionUUID->
+  "a755cf8b-48b8-426b-9ec6-e5f528b8a8fd"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   FrameBox[GridBox[{
+      {
+       StyleBox[
+        RowBox[{"M", "#"}],
+        FontSize->18], 
+       StyleBox["                                             ",
+        FontSize->18]},
+      {
+       StyleBox[" ",
+        FontSize->18], 
+       StyleBox[" ",
+        FontSize->18]}
+     }]], TraditionalForm]],ExpressionUUID->
+  "6c33ac9a-7343-4220-9e82-491fccca1e70"]
+}], "Title",
+ CellChangeTimes->{{3.9645161932290115`*^9, 
+  3.9645162715191965`*^9}},ExpressionUUID->"7fd4ccc4-2df5-478f-aa96-\
+ee55f77476ca"],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+Numerically solve and plot (as a function and in phase space) a few distinct \
+solutions of \
+\>", "ItemNumbered",
+ CellChangeTimes->{{3.964516285260607*^9, 3.9645163230093327`*^9}, {
+  3.9645163947891617`*^9, 3.964516425741819*^9}, {3.9645181655068445`*^9, 
+  3.96451818564034*^9}, {3.964518250241906*^9, 3.9645182548418465`*^9}, {
+  3.96451835206209*^9, 3.9645183534271317`*^9}, {3.96451882608692*^9, 
+  3.964518843920486*^9}, {3.9645199667095222`*^9, 3.964519981699046*^9}, {
+  3.9645200748529453`*^9, 
+  3.9645200886839905`*^9}},ExpressionUUID->"934a7a65-20f9-4223-a769-\
+56ce75216236"],
+
+Cell[TextData[Cell[BoxData[
+ FormBox[
+  RowBox[{
+   RowBox[{
+    RowBox[{"x", "'''"}], "+", 
+    RowBox[{"x", "''"}], "+", 
+    RowBox[{"7", " ", 
+     RowBox[{"x", "'"}]}], "+", "x"}], "=", "0"}], 
+  TraditionalForm]],ExpressionUUID->"2d04bc17-c172-448d-87aa-643ea1d7851a"]], \
+"SubitemParagraph",
+ CellChangeTimes->{{3.9645163559004545`*^9, 3.964516355901452*^9}, {
+  3.9645182643567924`*^9, 3.9645183620768337`*^9}, {3.964519991294532*^9, 
+  3.9645200686267824`*^9}, {3.964520271389128*^9, 3.9645203283902836`*^9}, {
+  3.9645221942785134`*^9, 3.9645222178292246`*^9}},
+ FontSize->14,ExpressionUUID->"b0bc4e89-7b95-4d03-82ab-14329e0f4cfe"],
+
+Cell["Describe the solutions in words.  Show your code and plots. ", \
+"ItemParagraph",
+ CellChangeTimes->{{3.9645163559004545`*^9, 3.964516355901452*^9}, {
+   3.9645182643567924`*^9, 3.9645183949611764`*^9}, {3.9645184607436085`*^9, 
+   3.9645184682210503`*^9}, {3.9645185150970354`*^9, 3.964518526097322*^9}, 
+   3.9645189379705133`*^9, {3.9645200989393067`*^9, 3.9645201032181373`*^9}, {
+   3.964520346665874*^9, 3.964520350635154*^9}, 3.964522264896965*^9},
+ FontSize->14,ExpressionUUID->"e156e44d-d5ad-4007-9078-a428ee8f9271"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Explain the solution behavior briefly in terms of the roots of the \
+polynomial ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     SuperscriptBox["m", "3"], "+", 
+     SuperscriptBox["m", "2"], "+", 
+     RowBox[{"7", "m"}], "+", "1"}], "==", "0"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "5cdee604-12a5-4661-83e3-da69a856a695"],
+ " "
+}], "ItemNumbered",
+ CellChangeTimes->{{3.964516285260607*^9, 3.9645163230093327`*^9}, {
+  3.9645163947891617`*^9, 3.964516425741819*^9}, {3.9645181655068445`*^9, 
+  3.96451818564034*^9}, {3.964518250241906*^9, 3.9645182548418465`*^9}, {
+  3.96451835206209*^9, 3.9645183534271317`*^9}, {3.96451882608692*^9, 
+  3.964518843920486*^9}, {3.9645199667095222`*^9, 3.964519981699046*^9}, {
+  3.9645200748529453`*^9, 3.9645200886839905`*^9}, {3.9645223358320293`*^9, 
+  3.9645223966339607`*^9}},ExpressionUUID->"c1dce02c-0c1b-4aad-b032-\
+0062b7ada303"],
+
+Cell[TextData[Cell[BoxData[
+ FormBox[
+  RowBox[{
+   RowBox[{
+    RowBox[{"x", "'''"}], "+", 
+    RowBox[{"x", "''"}], "+", 
+    RowBox[{"7", " ", 
+     RowBox[{"x", "'"}]}], "+", "x"}], "=", "0"}], 
+  TraditionalForm]],ExpressionUUID->"a75d2b95-dbe5-433e-bbbf-06af0ed5be8e"]], \
+"SubitemParagraph",
+ CellChangeTimes->{{3.9645163559004545`*^9, 3.964516355901452*^9}, {
+  3.9645182643567924`*^9, 3.9645183620768337`*^9}, {3.964519991294532*^9, 
+  3.9645200686267824`*^9}, {3.964520271389128*^9, 3.9645203283902836`*^9}, {
+  3.9645221942785134`*^9, 3.9645222178292246`*^9}},
+ FontSize->14,ExpressionUUID->"83409b02-274b-49ac-96c9-08173f6b35a8"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowToolbars->{"RulerBar", "MultipurposeBar"},
+WindowSize->{1115, 458.5},
+WindowMargins->{{-1209.5, Automatic}, {Automatic, -423.5}},
+TaggingRules-><|"TryRealOnly" -> False|>,
+FrontEndVersion->"13.3 for Microsoft Windows (64-bit) (July 24, 2023)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[StyleDefinitions -> "Default.nb"]]}, 
+  WindowSize -> {582.6, 494.4}, 
+  WindowMargins -> {{279, Automatic}, {Automatic, 40.199999999999996`}}, 
+  Visible -> False, FrontEndVersion -> 
+  "13.3 for Microsoft Windows (64-bit) (July 24, 2023)", StyleDefinitions -> 
+  "PrivateStylesheetFormatting.nb"],
+ExpressionUUID->"f6779469-9108-4620-a69f-3493cafa28ae"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 940, 36, 158, "Title",ExpressionUUID->"7fd4ccc4-2df5-478f-aa96-ee55f77476ca"],
+Cell[CellGroupData[{
+Cell[1545, 62, 600, 11, 32, "ItemNumbered",ExpressionUUID->"934a7a65-20f9-4223-a769-56ce75216236"],
+Cell[2148, 75, 641, 14, 22, "SubitemParagraph",ExpressionUUID->"b0bc4e89-7b95-4d03-82ab-14329e0f4cfe"],
+Cell[2792, 91, 531, 7, 23, "ItemParagraph",ExpressionUUID->"e156e44d-d5ad-4007-9078-a428ee8f9271"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3360, 103, 935, 21, 32, "ItemNumbered",ExpressionUUID->"c1dce02c-0c1b-4aad-b032-0062b7ada303"],
+Cell[4298, 126, 641, 14, 22, "SubitemParagraph",ExpressionUUID->"83409b02-274b-49ac-96c9-08173f6b35a8"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
