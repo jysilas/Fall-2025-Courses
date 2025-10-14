@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     22448,        554]
-NotebookOptionsPosition[     21578,        530]
-NotebookOutlinePosition[     22049,        548]
-CellTagsIndexPosition[     22006,        545]
+NotebookDataLength[     22965,        568]
+NotebookOptionsPosition[     21967,        541]
+NotebookOutlinePosition[     22438,        559]
+CellTagsIndexPosition[     22395,        556]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -78,11 +78,14 @@ Cell[TextData[{
     SubscriptBox["c", "m"]}], TraditionalForm]],
   FormatType->TraditionalForm,ExpressionUUID->
   "b11cbe59-c6d0-4318-baa5-a0827c20b3e5"],
- ".  "
+ ".   A recurrence is ",
+ StyleBox["stable",
+  FontVariations->{"Underline"->True}],
+ " if all initial conditions generate sequences that decay to zero. "
 }], "Text",
  CellChangeTimes->{{3.9694455813902354`*^9, 3.969445794420548*^9}, {
-  3.969446072946327*^9, 
-  3.969446086883703*^9}},ExpressionUUID->"9c3f46d9-7398-4125-b6fb-\
+  3.969446072946327*^9, 3.969446086883703*^9}, {3.969446301732025*^9, 
+  3.969446348293983*^9}},ExpressionUUID->"9c3f46d9-7398-4125-b6fb-\
 9732069eeb0d"],
 
 Cell[TextData[{
@@ -102,6 +105,13 @@ coefficients that ensures all the solutions decay to zero. "
   3.9694461615234356`*^9, 
   3.969446195548861*^9}},ExpressionUUID->"fab2a939-a20a-4222-8527-\
 44b01910d274"],
+
+Cell[CellGroupData[{
+
+Cell["Messing Around", "Section",
+ CellChangeTimes->{{3.969446274402253*^9, 
+  3.96944628340975*^9}},ExpressionUUID->"e5534ab6-5ba4-455a-8618-\
+23381b360d18"],
 
 Cell[CellGroupData[{
 
@@ -527,6 +537,7 @@ f6Sw6Q==
  CellLabel->"Out[29]=",ExpressionUUID->"e949fb5b-dfa9-4eb9-af31-a5945afe0278"]
 }, Open  ]]
 }, Open  ]]
+}, Open  ]]
 },
 WindowSize->{1038.5, 575},
 WindowMargins->{{Automatic, -1287.5}, {Automatic, -265}},
@@ -549,11 +560,14 @@ CellTagsIndex->{}
 Notebook[{
 Cell[CellGroupData[{
 Cell[580, 22, 476, 7, 122, "Title",ExpressionUUID->"f2f44f3d-e8ae-40dd-8c67-f1d81c252435"],
-Cell[1059, 31, 1692, 54, 101, "Text",ExpressionUUID->"9c3f46d9-7398-4125-b6fb-9732069eeb0d"],
-Cell[2754, 87, 694, 16, 101, "Text",ExpressionUUID->"fab2a939-a20a-4222-8527-44b01910d274"],
+Cell[1059, 31, 1886, 57, 130, "Text",ExpressionUUID->"9c3f46d9-7398-4125-b6fb-9732069eeb0d"],
+Cell[2948, 90, 694, 16, 101, "Text",ExpressionUUID->"fab2a939-a20a-4222-8527-44b01910d274"],
 Cell[CellGroupData[{
-Cell[3473, 107, 1616, 50, 155, "Input",ExpressionUUID->"41471bc5-2af8-49b0-9648-8204c6dcee49"],
-Cell[5092, 159, 16458, 367, 297, "Output",ExpressionUUID->"e949fb5b-dfa9-4eb9-af31-a5945afe0278"]
+Cell[3667, 110, 158, 3, 83, "Section",ExpressionUUID->"e5534ab6-5ba4-455a-8618-23381b360d18"],
+Cell[CellGroupData[{
+Cell[3850, 117, 1616, 50, 155, "Input",ExpressionUUID->"41471bc5-2af8-49b0-9648-8204c6dcee49"],
+Cell[5469, 169, 16458, 367, 297, "Output",ExpressionUUID->"e949fb5b-dfa9-4eb9-af31-a5945afe0278"]
+}, Open  ]]
 }, Open  ]]
 }, Open  ]]
 }
