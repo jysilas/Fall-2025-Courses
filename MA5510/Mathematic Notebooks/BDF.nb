@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    340561,       7595]
-NotebookOptionsPosition[    336970,       7523]
-NotebookOutlinePosition[    337441,       7541]
-CellTagsIndexPosition[    337398,       7538]
+NotebookDataLength[    340062,       7579]
+NotebookOptionsPosition[    336443,       7506]
+NotebookOutlinePosition[    336942,       7525]
+CellTagsIndexPosition[    336899,       7522]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -2103,7 +2103,7 @@ hBOVSX3PKf8H3hlekw==
       Scaled[0.02]}, {
       Scaled[0.05], 
       Scaled[0.05]}},
-   Ticks->{Automatic, Automatic}]}}, 1]], "Output",
+   Ticks->{Automatic, Automatic}]}}, 3]], "Output",
  CellChangeTimes->{
   3.969012299052925*^9, 3.9690123424174395`*^9, {3.9690123761303596`*^9, 
    3.969012470049168*^9}, {3.9690125519820843`*^9, 3.9690127459416075`*^9}, {
@@ -7209,49 +7209,42 @@ Cell[TextData[{
  "The polynomials that interpolate the value ",
  Cell[BoxData[
   FormBox[
-   SubscriptBox["y", "j"], TraditionalForm]],
-  FormatType->TraditionalForm,ExpressionUUID->
+   SubscriptBox["y", "j"], TraditionalForm]],ExpressionUUID->
   "d9943cf9-b5c6-4e06-bba7-10afa01dc886"],
  " at time ",
  Cell[BoxData[
   FormBox[
-   SubscriptBox["t", "j"], TraditionalForm]],
-  FormatType->TraditionalForm,ExpressionUUID->
+   SubscriptBox["t", "j"], TraditionalForm]],ExpressionUUID->
   "ec76a5d8-8073-4d25-ae76-e6abf0787524"],
  " and the back values ",
  Cell[BoxData[
   FormBox[
    SubscriptBox["y", 
-    RowBox[{"j", "-", "1"}]], TraditionalForm]],
-  FormatType->TraditionalForm,ExpressionUUID->
+    RowBox[{"j", "-", "1"}]], TraditionalForm]],ExpressionUUID->
   "4e2475b0-4372-44f3-9af8-4c81a9de1252"],
  " at time ",
  Cell[BoxData[
   FormBox[
    RowBox[{
-    SubscriptBox["t", "j"], "-", "h"}], TraditionalForm]],
-  FormatType->TraditionalForm,ExpressionUUID->
+    SubscriptBox["t", "j"], "-", "h"}], TraditionalForm]],ExpressionUUID->
   "3ee698e5-fc4e-421c-a19b-fcf7136187b9"],
  " and ",
  Cell[BoxData[
   FormBox[
    SubscriptBox["y", 
-    RowBox[{"j", "-", "2"}]], TraditionalForm]],
-  FormatType->TraditionalForm,ExpressionUUID->
+    RowBox[{"j", "-", "2"}]], TraditionalForm]],ExpressionUUID->
   "f016ca55-26d0-404a-bdcf-e5516fe9b665"],
  " at time ",
  Cell[BoxData[
   FormBox[
    RowBox[{
     SubscriptBox["t", "j"], "-", 
-    RowBox[{"2", "h"}]}], TraditionalForm]],
-  FormatType->TraditionalForm,ExpressionUUID->
+    RowBox[{"2", "h"}]}], TraditionalForm]],ExpressionUUID->
   "20139d1b-5b26-47e4-a951-56c7130f1714"],
  " etc are\n \t",
  Cell[BoxData[
   FormBox[
-   SubscriptBox["BDF", "1"], TraditionalForm]],
-  FormatType->TraditionalForm,ExpressionUUID->
+   SubscriptBox["BDF", "1"], TraditionalForm]],ExpressionUUID->
   "6c339d28-aafa-415a-a34b-ccb107cab32b"],
  "\t",
  Cell[BoxData[
@@ -7275,8 +7268,7 @@ Cell[TextData[{
  "\n\t",
  Cell[BoxData[
   FormBox[
-   SubscriptBox["BDF", "2"], TraditionalForm]],
-  FormatType->TraditionalForm,ExpressionUUID->
+   SubscriptBox["BDF", "2"], TraditionalForm]],ExpressionUUID->
   "7c659db6-f52f-4798-8ea5-58f3cd6dbc49"],
  "\t",
  Cell[BoxData[
@@ -7284,8 +7276,7 @@ Cell[TextData[{
    RowBox[{
     RowBox[{
      SubscriptBox["p", "2"], "(", "t", ")"}], "="}], TraditionalForm]],
-  FormatType->TraditionalForm,ExpressionUUID->
-  "2c21c0e6-f6c8-4507-b69c-efdd5521863a"],
+  ExpressionUUID->"2c21c0e6-f6c8-4507-b69c-efdd5521863a"],
  " ",
  Cell[BoxData[
   FormBox[
@@ -7326,8 +7317,7 @@ Cell[TextData[{
  "\n\t",
  Cell[BoxData[
   FormBox[
-   SubscriptBox["BDF", "3"], TraditionalForm]],
-  FormatType->TraditionalForm,ExpressionUUID->
+   SubscriptBox["BDF", "3"], TraditionalForm]],ExpressionUUID->
   "7d4aa9a2-2e76-4857-a295-4aad3b026471"],
  "\t",
  Cell[BoxData[
@@ -7406,21 +7396,18 @@ Cell[TextData[{
           SubscriptBox["y", 
            RowBox[{"j", "-", "1"}]], "-", 
           SubscriptBox["y", "j"]}], "h"]}], ")"}]}], "+", 
-     SubscriptBox["y", "j"]}]}], TraditionalForm]],
-  FormatType->TraditionalForm,ExpressionUUID->
+     SubscriptBox["y", "j"]}]}], TraditionalForm]],ExpressionUUID->
   "9abe72cc-23ac-4ddb-9070-d07224172614"],
  "\nEvaluating the derivatives of these at ",
  Cell[BoxData[
   FormBox[
    RowBox[{"t", "=", 
-    SubscriptBox["t", "j"]}], TraditionalForm]],
-  FormatType->TraditionalForm,ExpressionUUID->
+    SubscriptBox["t", "j"]}], TraditionalForm]],ExpressionUUID->
   "44f84b10-cf54-4bd3-a56f-a9468f6bf3c6"],
  " gives the BDF coefficients!\n\t",
  Cell[BoxData[
   FormBox[
-   SubscriptBox["BDF", "1"], TraditionalForm]],
-  FormatType->TraditionalForm,ExpressionUUID->
+   SubscriptBox["BDF", "1"], TraditionalForm]],ExpressionUUID->
   "04d74039-92a7-4423-8d05-8c12abfb2fc6"],
  "\t",
  Cell[BoxData[
@@ -7440,8 +7427,7 @@ Cell[TextData[{
  "\n\t",
  Cell[BoxData[
   FormBox[
-   SubscriptBox["BDF", "2"], TraditionalForm]],
-  FormatType->TraditionalForm,ExpressionUUID->
+   SubscriptBox["BDF", "2"], TraditionalForm]],ExpressionUUID->
   "aad7a227-7b30-4cb6-87df-ea55ab6bacac"],
  "\t",
  Cell[BoxData[
@@ -7452,8 +7438,7 @@ Cell[TextData[{
       SubscriptBox["p", "2"], "'"}], 
      RowBox[{"(", 
       SubscriptBox["t", "j"], ")"}]}], "="}], TraditionalForm]],
-  FormatType->TraditionalForm,ExpressionUUID->
-  "5315e8d5-8ddc-4e13-9914-8973910b9c17"],
+  ExpressionUUID->"5315e8d5-8ddc-4e13-9914-8973910b9c17"],
  " ",
  Cell[BoxData[
   FormBox[
@@ -7477,8 +7462,7 @@ Cell[TextData[{
  "\n\t",
  Cell[BoxData[
   FormBox[
-   SubscriptBox["BDF", "3"], TraditionalForm]],
-  FormatType->TraditionalForm,ExpressionUUID->
+   SubscriptBox["BDF", "3"], TraditionalForm]],ExpressionUUID->
   "dc7341b7-e60e-4072-91ff-51810b656075"],
  "\t",
  Cell[BoxData[
@@ -7503,8 +7487,7 @@ Cell[TextData[{
         RowBox[{"j", "-", "1"}]]}], "+", 
       RowBox[{"11", " ", 
        SubscriptBox["y", "j"]}]}], 
-     RowBox[{"6", " ", "h"}]]}], TraditionalForm]],
-  FormatType->TraditionalForm,ExpressionUUID->
+     RowBox[{"6", " ", "h"}]]}], TraditionalForm]],ExpressionUUID->
   "fce98b1c-4457-48e7-9162-e6be90ad8911"],
  "\nYou could (if you wanted to) work out the higher order BDF formulas the \
 same way. "
@@ -7521,8 +7504,9 @@ same way. "
 }, Open  ]]
 }, Open  ]]
 },
-WindowSize->{1038.5, 575},
-WindowMargins->{{Automatic, -1287.5}, {Automatic, -265}},
+WindowSize->{1152, 585.6},
+WindowMargins->{{
+  Automatic, -5.399999999999864}, {-5.399999999999977, Automatic}},
 TaggingRules-><|"TryRealOnly" -> False|>,
 Magnification->1.25,
 FrontEndVersion->"13.3 for Microsoft Windows (64-bit) (July 24, 2023)",
@@ -7593,7 +7577,7 @@ Cell[325544, 7160, 1266, 35, 75, "Output",ExpressionUUID->"9ffd8dd7-15d6-4943-b1
 }, Open  ]],
 Cell[CellGroupData[{
 Cell[326859, 7201, 248, 4, 56, "Subsubsection",ExpressionUUID->"9c64b5b0-87f4-4786-8d8c-649cc9725d32"],
-Cell[327110, 7207, 9820, 311, 429, "Text",ExpressionUUID->"24f3354b-e23f-44e3-8dad-0c1d3b91e1f0"]
+Cell[327110, 7207, 9293, 294, 400, "Text",ExpressionUUID->"24f3354b-e23f-44e3-8dad-0c1d3b91e1f0"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
