@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      9230,        244]
-NotebookOptionsPosition[      7429,        203]
-NotebookOutlinePosition[      8140,        225]
-CellTagsIndexPosition[      8097,        222]
+NotebookDataLength[      9346,        245]
+NotebookOptionsPosition[      7545,        204]
+NotebookOutlinePosition[      8256,        226]
+CellTagsIndexPosition[      8213,        223]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -52,6 +52,7 @@ d892773f6fd4"],
 Cell[CellGroupData[{
 
 Cell[TextData[{
+ "Estimate parameters in the Lotka-Volterra model ",
  Cell[BoxData[
   FormBox[GridBox[{
      {
@@ -63,8 +64,7 @@ Cell[TextData[{
       RowBox[{
        RowBox[{"-", "\[Gamma]"}], " ", "w"}], "+", 
       RowBox[{"\[Delta]", " ", "m", " ", "w"}]}
-    }], TraditionalForm]],
-  FormatType->TraditionalForm,ExpressionUUID->
+    }], TraditionalForm]],ExpressionUUID->
   "cc35d36d-a5d5-4050-b91c-519c6ff127e2"],
  "  for moose (m) and wolves (w).   Plot the predictions of your model.   "
 }], "Item",
@@ -74,7 +74,8 @@ Cell[TextData[{
    3.9699502294685106`*^9}, {3.9699509521705933`*^9, 3.9699509690361085`*^9}, 
    3.9699511191733665`*^9, {3.969951217647865*^9, 3.969951252939571*^9}, {
    3.9699512829726343`*^9, 3.9699514586469574`*^9}, {3.969951571495902*^9, 
-   3.969951788404578*^9}},ExpressionUUID->"cef6ec6c-3659-4340-b8d7-\
+   3.969951788404578*^9}, {3.9699522135636873`*^9, 
+   3.969952231179265*^9}},ExpressionUUID->"cef6ec6c-3659-4340-b8d7-\
 3ea3a9d173b8"],
 
 Cell[BoxData[
@@ -91,12 +92,12 @@ f5571fecd29d"]
 Cell[CellGroupData[{
 
 Cell[TextData[{
- "Estimate birth and death rates for rabbits then write down and solve a \
-simple ODE modeling an initially small population of rabbits ",
+ "Show some reasoning to estimate birth and death rates for rabbits then \
+write down and solve a simple ODE modeling an initially small population of \
+rabbits ",
  Cell[BoxData[
   FormBox[
-   RowBox[{"r", "(", "t", ")"}], TraditionalForm]],
-  FormatType->TraditionalForm,ExpressionUUID->
+   RowBox[{"r", "(", "t", ")"}], TraditionalForm]],ExpressionUUID->
   "6f5c461f-009f-458b-8694-d768cd38acdc"],
  " on a lush fertile island. Discuss the results. "
 }], "ItemNumbered",
@@ -105,8 +106,8 @@ simple ODE modeling an initially small population of rabbits ",
   3.969442030590208*^9}, {3.969950235431782*^9, 3.9699502683206177`*^9}, {
   3.969950334889432*^9, 3.9699503445101223`*^9}, {3.9699510257020617`*^9, 
   3.969951080330969*^9}, {3.9699514641095915`*^9, 3.969951564433976*^9}, {
-  3.9699518259770203`*^9, 
-  3.9699518685653534`*^9}},ExpressionUUID->"8b2516a1-ac32-4afd-a19a-\
+  3.9699518259770203`*^9, 3.9699518685653534`*^9}, {3.969952261730156*^9, 
+  3.9699522788974466`*^9}},ExpressionUUID->"8b2516a1-ac32-4afd-a19a-\
 d30674377739"],
 
 Cell[BoxData[
@@ -228,22 +229,22 @@ Cell[CellGroupData[{
 Cell[580, 22, 584, 18, 114, "Title",ExpressionUUID->"7fd4ccc4-2df5-478f-aa96-ee55f77476ca"],
 Cell[1167, 42, 449, 7, 35, "Text",ExpressionUUID->"0bf32112-6876-4808-92f5-d892773f6fd4"],
 Cell[CellGroupData[{
-Cell[1641, 53, 1051, 24, 47, "Item",ExpressionUUID->"cef6ec6c-3659-4340-b8d7-3ea3a9d173b8"],
-Cell[2695, 79, 454, 8, 219, "Input",ExpressionUUID->"b7028334-f494-4f1a-b743-f5571fecd29d"]
+Cell[1641, 53, 1125, 25, 47, "Item",ExpressionUUID->"cef6ec6c-3659-4340-b8d7-3ea3a9d173b8"],
+Cell[2769, 80, 454, 8, 219, "Input",ExpressionUUID->"b7028334-f494-4f1a-b743-f5571fecd29d"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[3186, 92, 875, 17, 53, "ItemNumbered",ExpressionUUID->"8b2516a1-ac32-4afd-a19a-d30674377739"],
-Cell[4064, 111, 645, 11, 371, "Input",ExpressionUUID->"407dd5c6-6d8f-4a2a-abf4-84f21b1e2850"]
+Cell[3260, 93, 917, 17, 53, "ItemNumbered",ExpressionUUID->"8b2516a1-ac32-4afd-a19a-d30674377739"],
+Cell[4180, 112, 645, 11, 371, "Input",ExpressionUUID->"407dd5c6-6d8f-4a2a-abf4-84f21b1e2850"]
 }, Open  ]],
-Cell[4724, 125, 99, 1, 4, "PageBreak",ExpressionUUID->"3d3ce448-30d8-463b-aa23-a32eea6f4ea3",
+Cell[4840, 126, 99, 1, 4, "PageBreak",ExpressionUUID->"3d3ce448-30d8-463b-aa23-a32eea6f4ea3",
  PageBreakBelow->True],
 Cell[CellGroupData[{
-Cell[4848, 130, 771, 23, 32, "Item",ExpressionUUID->"e2efd3cd-76e7-4407-b8b1-84974e64f71e"],
-Cell[5622, 155, 329, 6, 162, "Input",ExpressionUUID->"41d056a6-e60c-47bb-9555-4be8a3f29c48"]
+Cell[4964, 131, 771, 23, 32, "Item",ExpressionUUID->"e2efd3cd-76e7-4407-b8b1-84974e64f71e"],
+Cell[5738, 156, 329, 6, 162, "Input",ExpressionUUID->"41d056a6-e60c-47bb-9555-4be8a3f29c48"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[5988, 166, 765, 20, 33, "ItemNumbered",ExpressionUUID->"3bf8a340-0727-45b5-a8ef-440d7556900f"],
-Cell[6756, 188, 645, 11, 371, "Input",ExpressionUUID->"3ca19f37-4fe3-436f-8eca-5f5be5943abd"]
+Cell[6104, 167, 765, 20, 33, "ItemNumbered",ExpressionUUID->"3bf8a340-0727-45b5-a8ef-440d7556900f"],
+Cell[6872, 189, 645, 11, 371, "Input",ExpressionUUID->"3ca19f37-4fe3-436f-8eca-5f5be5943abd"]
 }, Open  ]]
 }, Open  ]]
 }
