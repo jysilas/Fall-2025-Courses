@@ -1,0 +1,357 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     11468,        349]
+NotebookOptionsPosition[     10637,        327]
+NotebookOutlinePosition[     11107,        345]
+CellTagsIndexPosition[     11064,        342]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Multi-Step Schemes and Nordseick Vectors ", "Title",
+ CellChangeTimes->{{3.9648588100134473`*^9, 3.964858825018669*^9}, {
+  3.9651175705012517`*^9, 3.965117581600165*^9}, {3.9658135999230127`*^9, 
+  3.9658136046261387`*^9}, {3.9663473772906404`*^9, 3.966347399460182*^9}, {
+  3.9688409144049745`*^9, 3.9688409188514566`*^9}, {3.9690077688109226`*^9, 
+  3.969007780156148*^9}, {3.9694455686295304`*^9, 3.9694455785709286`*^9}, {
+  3.9694464121857224`*^9, 
+  3.9694464270765676`*^9}},ExpressionUUID->"f2f44f3d-e8ae-40dd-8c67-\
+f1d81c252435"],
+
+Cell[TextData[{
+ "A single-step ODE solver uses one back value ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["y", 
+    RowBox[{"n", "-", "1"}]], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "ecae4dca-7c3e-401e-8de3-3a6070319f2c"],
+ " to advance the solution of ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"y", "'"}], "=", 
+    RowBox[{"f", "(", "y", ")"}]}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "4b0e0b02-d575-4fff-979d-483a0eee7b9e"],
+ " to ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["y", "n"], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "7f518eb4-cf51-45c2-8976-d94e82fdbecc"],
+ ".  The simplest examples are \n\tExplicit Euler:\t",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["y", "n"], "=", 
+    RowBox[{
+     SubscriptBox["y", 
+      RowBox[{"n", "-", "1"}]], "+", 
+     RowBox[{"h", " ", 
+      RowBox[{"f", "(", 
+       SubscriptBox["y", 
+        RowBox[{"n", "-", "1"}]], ")"}]}]}]}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "00bd926f-cfc4-42c6-ba66-18394f9a74dc"],
+ "\n\tImplicit Euler:  ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["y", "n"], "=", 
+    RowBox[{
+     SubscriptBox["y", 
+      RowBox[{"n", "-", "1"}]], "+", 
+     RowBox[{"h", " ", 
+      RowBox[{"f", "(", 
+       SubscriptBox["y", "n"], ")"}]}]}]}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "9e6f940d-0ba3-4d6c-b668-66f5144ffc42"],
+ "\nAll RK schemes are single step solvers.  The internal steps are called \
+internal stages. "
+}], "Text",
+ CellChangeTimes->{{3.9694455813902354`*^9, 3.969445794420548*^9}, {
+  3.969446072946327*^9, 3.969446086883703*^9}, {3.969446301732025*^9, 
+  3.969446348293983*^9}, {3.96944643557806*^9, 
+  3.969446723531066*^9}},ExpressionUUID->"9c3f46d9-7398-4125-b6fb-\
+9732069eeb0d"],
+
+Cell[TextData[{
+ "A two-step ODE solver uses two back values ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["y", 
+    RowBox[{"n", "-", "1"}]], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "c5715e72-fd65-4846-8c02-a6c61ff92de3"],
+ " and ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["y", 
+    RowBox[{"n", "-", "2"}]], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "97b22def-7769-4a7b-931b-8aa3c5674238"],
+ " to advance the solution to ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["y", "n"], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "796c114d-3556-4a6e-b63c-4a1ce0c99def"],
+ ".  A simple example is the ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["BDF", "2"], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "7d3dc5a7-a83d-4c9f-a6b9-5cfee7c82c25"],
+ " solver\n\t",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["BDF", "2"], ":"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "bf4566ce-84a8-4640-9377-9268e78249cc"],
+ "\t",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     SubscriptBox["y", 
+      RowBox[{"n", "+", "2"}]], "-", 
+     RowBox[{
+      FractionBox["4", "3"], 
+      SubscriptBox["y", 
+       RowBox[{"n", "+", "1"}]]}], "+", 
+     RowBox[{
+      FractionBox["1", "3"], 
+      SubscriptBox["y", "n"]}]}], "=", 
+    RowBox[{
+     FractionBox["2", "3"], "h", " ", 
+     RowBox[{"f", "(", 
+      SubscriptBox["y", 
+       RowBox[{"n", "+", "2"}]], ")"}]}]}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "46b39a00-3ee2-44e8-a477-274d0223cda8"],
+ "   (from https://en.wikipedia.org/wiki/Backward_differentiation_formula )\n\
+which is the same as \n\t",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["BDF", "2"], ":"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "c5de7605-1262-4229-b412-0867c2329903"],
+ "\t",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["y", "n"], "=", 
+    RowBox[{
+     RowBox[{
+      FractionBox["4", "3"], 
+      SubscriptBox["y", 
+       RowBox[{"n", "-", "1"}]]}], "-", 
+     RowBox[{
+      FractionBox["1", "3"], 
+      SubscriptBox["y", 
+       RowBox[{"n", "-", "2"}]]}], "+", 
+     RowBox[{
+      FractionBox["2", "3"], "h", " ", 
+      RowBox[{"f", "(", 
+       SubscriptBox["y", "n"], ")"}]}]}]}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "3361558e-1fb8-49c4-b649-07ce22ea781a"],
+ " "
+}], "Text",
+ CellChangeTimes->{{3.9694455813902354`*^9, 3.969445794420548*^9}, {
+  3.969446072946327*^9, 3.969446086883703*^9}, {3.969446301732025*^9, 
+  3.969446348293983*^9}, {3.96944643557806*^9, 3.9694467278418927`*^9}, {
+  3.9694467662101307`*^9, 3.9694469199797273`*^9}, {3.969446957555913*^9, 
+  3.9694470226336684`*^9}},ExpressionUUID->"b15fd463-5378-4a6c-8373-\
+59590ae54220"],
+
+Cell[TextData[{
+ "A three-step ODE solver uses two back values ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["y", 
+    RowBox[{"n", "-", "1"}]], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "2d03ba14-bc21-4d38-8148-a78a07f3f4bb"],
+ " and ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["y", 
+    RowBox[{"n", "-", "2"}]], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "07c333e5-a136-4c1e-8365-71a4683dc6f2"],
+ " and ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["y", 
+    RowBox[{"n", "-", "3"}]], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "13459270-54eb-488a-bad3-722ba007067c"],
+ " to advance the solution to ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["y", "n"], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "7c4acfa8-5911-495e-b11d-d93150be10b3"],
+ ".  ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["BDF", "3"], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "0eca7217-3c63-43af-84fe-af6a12fcf390"],
+ " is an example\n\t",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["BDF", "3"], ":"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "42d9f257-b90d-4144-a02f-7925a814b681"],
+ "\t",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["y", "n"], "=", 
+    RowBox[{
+     RowBox[{
+      FractionBox["18", "11"], 
+      SubscriptBox["y", 
+       RowBox[{"n", "-", "1"}]]}], "-", 
+     RowBox[{
+      FractionBox["9", "11"], 
+      SubscriptBox["y", 
+       RowBox[{"n", "-", "2"}]]}], "+", 
+     RowBox[{
+      FractionBox["2", "11"], 
+      SubscriptBox["y", 
+       RowBox[{"n", "-", "3"}]]}], "+", 
+     RowBox[{
+      FractionBox["6", "11"], "h", " ", 
+      RowBox[{"f", "(", 
+       SubscriptBox["y", "n"], ")"}]}]}]}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "fbfec30c-1627-403d-af34-40fc20774c6b"],
+ " "
+}], "Text",
+ CellChangeTimes->{{3.9694455813902354`*^9, 3.969445794420548*^9}, {
+  3.969446072946327*^9, 3.969446086883703*^9}, {3.969446301732025*^9, 
+  3.969446348293983*^9}, {3.96944643557806*^9, 3.9694467278418927`*^9}, {
+  3.9694467662101307`*^9, 3.9694469199797273`*^9}, {3.969446957555913*^9, 
+  3.9694470226336684`*^9}, {3.969447087018896*^9, 
+  3.969447209908309*^9}},ExpressionUUID->"6e1ca139-424f-424b-b79f-\
+1f890e25bb6d"],
+
+Cell[TextData[{
+ "It is difficult to change the step-size h in a multi-step solver.  The \
+Nordseick vector rewrites multi-step schemes into operations on a list of \
+values approximating scaled derivatives. For a three step scheme it \n\t",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["\[ScriptCapitalN]", "n"], "=", 
+    RowBox[{"(", GridBox[{
+       {
+        SubscriptBox["y", "n"]},
+       {
+        RowBox[{"h", " ", 
+         SubscriptBox[
+          OverscriptBox["y", "."], "n"]}]},
+       {
+        RowBox[{
+         FractionBox["1", "2"], 
+         SuperscriptBox["h", "2"], " ", 
+         SubscriptBox[
+          OverscriptBox["y", ".."], "n"]}]}
+      }], ")"}]}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "eb8ab48f-d71f-4a93-a6bc-c75c21258cc1"],
+ "\nNote: The advantage of the Nordseick form is that it is easy to change \
+step size!  Depending on how you want to think about this if \n\t",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"y", "'"}], "=", 
+    RowBox[{"f", "(", "y", ")"}]}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "918e6d96-2a31-44bb-8a05-01fa773581f0"],
+ "\nis an ODE in ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["\[DoubleStruckCapitalR]", "m"], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "0a3bb386-c197-4f0f-8c79-ede0ecaaa0e1"],
+ " then the Nordseick \[OpenCurlyDoubleQuote]vector\[CloseCurlyDoubleQuote] \
+for a three-step scheme is either an element in ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["\[DoubleStruckCapitalR]", 
+    RowBox[{"3", "m"}]], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "169c00b0-d5b1-450e-998f-39baed3b49b3"],
+ " or an element in ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["\[DoubleStruckCapitalR]", 
+    RowBox[{"3", "\[Times]", "m"}]], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "a5459995-538c-4147-8f11-946c1cf1831d"],
+ " or an element in ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["\[DoubleStruckCapitalR]", 
+    RowBox[{"m", "\[Times]", "3"}]], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "f6cfce4f-05ed-4b67-99c4-21be55fd2481"],
+ ". "
+}], "Text",
+ CellChangeTimes->{{3.9694470276408215`*^9, 3.969447073987153*^9}, {
+  3.969447220273294*^9, 3.9694472345372143`*^9}, {3.9694473000231543`*^9, 
+  3.9694475185042553`*^9}, {3.9694475735484953`*^9, 
+  3.9694478090979347`*^9}},ExpressionUUID->"07a48ca5-35cc-41c4-a379-\
+0e2d7dec58f4"]
+}, Open  ]]
+},
+WindowSize->{1189, 570.5},
+WindowMargins->{{1843, Automatic}, {Automatic, -482.5}},
+TaggingRules-><|"TryRealOnly" -> False|>,
+Magnification->1.25,
+FrontEndVersion->"13.3 for Microsoft Windows (64-bit) (July 24, 2023)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"319b7497-6742-414a-97dc-fe38934cd59a"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 545, 8, 122, "Title",ExpressionUUID->"f2f44f3d-e8ae-40dd-8c67-f1d81c252435"],
+Cell[1128, 32, 1856, 56, 130, "Text",ExpressionUUID->"9c3f46d9-7398-4125-b6fb-9732069eeb0d"],
+Cell[2987, 90, 2832, 90, 138, "Text",ExpressionUUID->"b15fd463-5378-4a6c-8373-59590ae54220"],
+Cell[5822, 182, 2319, 73, 76, "Text",ExpressionUUID->"6e1ca139-424f-424b-b79f-1f890e25bb6d"],
+Cell[8144, 257, 2477, 67, 269, "Text",ExpressionUUID->"07a48ca5-35cc-41c4-a379-0e2d7dec58f4"]
+}, Open  ]]
+}
+]
+*)
+
